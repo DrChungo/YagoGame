@@ -1,0 +1,92 @@
+{
+  "playerSkills": [
+    {
+      "id": "skill_mute",
+      "name": "Mutearse",
+      "type": "damage",
+      "power": 8,
+      "target": "singleEnemy",
+      "description": "Ataque básico de Yago. Te tapas los oídos y golpeas."
+    },
+
+    {
+      "id": "skill_bedtime",
+      "name": "Irse a la cama",
+      "type": "buff",
+      "power": 0,
+      "target": "self",
+      "effects": [
+        { "stat": "armor", "delta": 6, "durationTurns": 2 }
+      ],
+      "description": "Te metes en la cama. Nadie te hace daño."
+    },
+
+    {
+      "id": "skill_callar_lander",
+      "name": "Callar a Lander",
+      "type": "damage",
+      "power": 14,
+      "target": "singleEnemy",
+      "description": "Le gritas tan fuerte que le quitas las ganas de existir."
+    },
+
+    {
+      "id": "skill_anorar",
+      "name": "Añorar",
+      "type": "buff",
+      "power": 0,
+      "target": "self",
+      "effects": [
+        { "stat": "hp", "delta": 12, "durationTurns": 0 }
+      ],
+      "description": "Recuerdas tiempos mejores. Te curas un poco."
+    },
+
+    {
+      "id": "skill_porrillo",
+      "name": "Liarse un porrillo",
+      "type": "buff",
+      "power": 0,
+      "target": "self",
+      "effects": [
+        { "stat": "damage", "delta": 4, "durationTurns": 2 },
+        { "stat": "speed", "delta": -2, "durationTurns": 2 }
+      ],
+      "description": "Vas volando… pero más lento."
+    },
+
+    {
+      "id": "skill_coser_bocas",
+      "name": "Coser bocas",
+      "type": "damage",
+      "power": 20,
+      "target": "singleEnemy",
+      "cooldown": 3,
+      "description": "Ataque potente. Se acabó hablar."
+    },
+
+    {
+      "id": "skill_chapar_morro",
+      "name": "Chapar el morro",
+      "type": "debuff",
+      "power": 0,
+      "target": "singleEnemy",
+      "effects": [
+        { "stat": "damage", "delta": -4, "durationTurns": 2 }
+      ],
+      "description": "Le bajas los humos a base de gritos."
+    },
+
+    {
+      "id": "skill_roleplay",
+      "name": "Rolear correctamente",
+      "type": "buff",
+      "power": 0,
+      "target": "self",
+      "effects": [
+        { "stat": "speed", "delta": 3, "durationTurns": 2 }
+      ],
+      "description": "Cuando roleas bien, todo fluye."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "npcs": [
+    {
+      "id": "npc_santi_shop",
+      "name": "Santi",
+      "role": "Tienda",
+      "trigger": "afterRoomChance",
+      "text": "Eeeh primo, mira lo que tengo por aquí...",
+      "event": { "type": "shop", "shopPoolId": "shopPool_basic" }
+    },
+    {
+      "id": "npc_jordi_buff",
+      "name": "Jordi",
+      "role": "PostBoss",
+      "trigger": "afterBoss",
+      "text": "Vente al baño. Te vas a poner como un toro.",
+      "event": {
+        "type": "buff",
+        "effects": [{ "stat": "hp", "delta": 10, "durationTurns": -1 }]
+      }
+    },
+    {
+      "id": "npc_erik_nothing",
+      "name": "Erik",
+      "role": "PostBoss",
+      "trigger": "afterBoss",
+      "text": "Tío qué guapo estás. Bueno me piro.",
+      "event": { "type": "none" }
+    },
+    {
+      "id": "npc_wali_psico",
+      "name": "Wali",
+      "role": "PostBoss",
+      "trigger": "afterBoss",
+      "text": "Te suelta un discurso infinito... Te ha psoificado.",
+      "event": {
+        "type": "normalizeStatsToLowest",
+        "message": "Te ha psoificado."
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "pools": [
+    {
+      "id": "roomEnemyPool_tier1",
+      "type": "enemies",
+      "entries": [
+        { "refId": "enemy_gitanillo_manos", "weight": 100 }
+      ]
+    },
+    {
+      "id": "roomRewardItems_common",
+      "type": "items",
+      "entries": [
+        { "refId": "item_emilio_car", "weight": 20 },
+        { "refId": "set_lucas_keyboard", "weight": 35 },
+        { "refId": "set_lucas_mouse", "weight": 25 },
+        { "refId": "item_moi_hair", "weight": 1 }
+      ],
+      "rules": {
+        "respectUniquePerRun": true
+      }
+    },
+    {
+      "id": "postBossNpcPool",
+      "type": "npcs",
+      "entries": [
+        { "refId": "npc_jordi_buff", "weight": 60 },
+        { "refId": "npc_erik_nothing", "weight": 25 },
+        { "refId": "npc_wali_psico", "weight": 15 }
+      ]
+    },
+    {
+      "id": "shopPool_basic",
+      "type": "items",
+      "entries": [
+        { "refId": "item_emilio_car", "weight": 25 },
+        { "refId": "set_lucas_keyboard", "weight": 40 },
+        { "refId": "set_lucas_mouse", "weight": 30 }
+      ],
+      "rules": {
+        "respectUniquePerRun": true
+      }
+    }
+  ]
+}

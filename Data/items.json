@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "id": "item_moi_hair",
+      "name": "Pelo de Moi",
+      "tier": 4,
+      "uniquePerRun": true,
+      "statMods": { "armor": 12 },
+      "description": "El legendario pelo del salvador."
+    },
+    {
+      "id": "item_emilio_car",
+      "name": "Coche de Emilio",
+      "tier": 2,
+      "uniquePerRun": false,
+      "statMods": { "speed": 5, "hp": -10 },
+      "description": "No se sabe cómo llegó ahí, pero dio una vuelta de campana."
+    },
+
+    {
+      "id": "set_lucas_keyboard",
+      "name": "Teclado de Lucas",
+      "tier": 1,
+      "uniquePerRun": false,
+      "statMods": { "damage": 2 },
+      "setId": "set_lucas_setup",
+      "description": "Sientes el ligero poder del dios del gaming."
+    },
+    {
+      "id": "set_lucas_mouse",
+      "name": "Ratón de Lucas",
+      "tier": 2,
+      "uniquePerRun": false,
+      "statMods": { "speed": 2 },
+      "setId": "set_lucas_setup",
+      "description": "Sientes que puedes estar en todos lados."
+    }
+  ],
+  "sets": [
+    {
+      "id": "set_lucas_setup",
+      "name": "Set Setup Lucas",
+      "requiredCount": 4,
+      "bonusStatMods": { "damage": 10 },
+      "bonusText": "Completar el set te da +++ daño. Estás en modo esports."
+    }
+  ]
+}

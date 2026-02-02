@@ -1,0 +1,27 @@
+{
+  "game": {
+    "title": "Roguelike Yago",
+    "seededRuns": true,
+    "combat": {
+      "maxPlayerSkills": 4,
+      "turnOrder": "speed_desc",
+      "targeting": {
+        "enemiesPerRoom": 3,
+        "playerChoosesTarget": true
+      }
+    },
+    "runStructure": {
+      "roomsBeforeEachBoss": 4,
+      "bossCount": 4,
+      "postBossNpcEvent": {
+        "alwaysHappens": true,
+        "poolId": "postBossNpcPool"
+      },
+      "shopNpcEvent": {
+        "chanceAfterRoom": 0.15,
+        "npcId": "npc_santi_shop"
+      }
+    },
+    "stats": ["hp", "speed", "damage", "armor"]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "saveVersion": 1,
+  "run": {
+    "seed": 123456789,
+    "roomIndex": 2,
+    "bossIndex": 0,
+    "history": {
+      "defeatedEnemies": ["enemy_gitanillo_manos"],
+      "defeatedBosses": [],
+      "uniqueItemsObtained": ["item_moi_hair"]
+    }
+  },
+  "player": {
+    "name": "Yago",
+    "classId": "class_yago_sleepy",
+    "level": 1,
+    "currentStats": { "hp": 92, "speed": 6, "damage": 12, "armor": 18 },
+    "skills": ["skill_mute", "skill_bedtime"],
+    "inventory": ["item_emilio_car", "set_lucas_keyboard"],
+    "equipped": ["item_emilio_car"]
+  }
+}
