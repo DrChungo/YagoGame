@@ -1,0 +1,14 @@
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\bin\Debug\net9.0\YagoGame.exe
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\bin\Debug\net9.0\YagoGame.deps.json
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\bin\Debug\net9.0\YagoGame.runtimeconfig.json
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\bin\Debug\net9.0\YagoGame.dll
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\bin\Debug\net9.0\YagoGame.pdb
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\YagoGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\YagoGame.AssemblyInfoInputs.cache
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\YagoGame.AssemblyInfo.cs
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\YagoGame.csproj.CoreCompileInputs.cache
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\YagoGame.dll
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\refint\YagoGame.dll
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\YagoGame.pdb
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\YagoGame.genruntimeconfig.cache
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\ref\YagoGame.dll
