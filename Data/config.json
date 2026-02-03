@@ -1,27 +1,70 @@
 {
   "game": {
-    "title": "Roguelike Yago",
-    "seededRuns": true,
-    "combat": {
-      "maxPlayerSkills": 4,
-      "turnOrder": "speed_desc",
-      "targeting": {
-        "enemiesPerRoom": 3,
-        "playerChoosesTarget": true
-      }
-    },
-    "runStructure": {
-      "roomsBeforeEachBoss": 4,
-      "bossCount": 4,
-      "postBossNpcEvent": {
-        "alwaysHappens": true,
-        "poolId": "postBossNpcPool"
+    "maxPlayerSkills": 4,
+    "enemiesPerRoom": 3,
+    "roomsBetweenBosses": 3,
+    "totalBosses": 4,
+    "rewardChoicesAfterRoom": 3,
+    "rewardChoicesAfterBoss": 3
+  },
+
+  "run": {
+    "bossOrder": [
+      "boss_marc",
+      "boss_liam",
+      "boss_felipe",
+      "boss_lander"
+    ],
+    "shopChanceAfterRoom": 0.15,
+    "postBossNpcPool": [
+      "jordi_buff",
+      "erik_event",
+      "wali_event"
+    ]
+  },
+
+  "rng": {
+    "useSeed": true,
+    "defaultSeed": 12345
+  },
+
+  "combat": {
+    "turnOrder": "speed",
+    "minDamage": 1
+  },
+
+  "drops": {
+    "uniqueItemsOncePerRun": true,
+
+    "afterRoom": {
+      "rewardTypeWeights": {
+        "item": 70,
+        "skill": 30
       },
-      "shopNpcEvent": {
-        "chanceAfterRoom": 0.15,
-        "npcId": "npc_santi_shop"
+      "tierWeightsByType": {
+        "item": { "1": 60, "2": 30, "3": 9, "4": 1 },
+        "skill": { "1": 55, "2": 30, "3": 12, "4": 3 }
       }
     },
-    "stats": ["hp", "speed", "damage", "armor"]
+
+    "afterBoss": {
+      "rewardTypeWeights": {
+        "item": 80,
+        "skill": 20
+      },
+      "tierWeightsByType": {
+        "item": { "3": 70, "4": 30 },
+        "skill": { "2": 40, "3": 45, "4": 15 }
+      }
+    }
+  },
+
+  "enemyGeneration": {
+    "tierWeights": {
+      "1": 60,
+      "2": 25,
+      "3": 10,
+      "4": 5
+    }
   }
 }

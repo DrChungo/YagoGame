@@ -1,178 +1,62 @@
-{
-  "bosses": [
-    {
-      "id": "boss_marc",
-      "name": "Marc",
-      "order": 1,
-      "stats": { "hp": 220, "speed": 9, "damage": 18, "armor": 10 },
-      "attacks": [
-        {
-          "id": "atk_marc_porrillo",
-          "name": "Porrillo al sol",
-          "type": "damage",
-          "power": 14,
-          "target": "player",
-          "text": "Se enciende uno y te llega el humo directo al alma."
-        },
-        {
-          "id": "atk_marc_penta",
-          "name": "La penta se ganaaaaa",
-          "type": "damage",
-          "power": 18,
-          "target": "player",
-          "text": "Grita tan fuerte que te baja la vida por vergüenza ajena."
-        },
-        {
-          "id": "atk_marc_hobbit",
-          "name": "Puto hooooobit",
-          "type": "damage",
-          "power": 16,
-          "target": "player",
-          "text": "Te insulta con creatividad preocupante."
-        },
-        {
-          "id": "atk_marc_10e",
-          "name": "Los 10 €",
-          "type": "debuff",
-          "power": 0,
-          "target": "player",
-          "effects": [{ "stat": "speed", "delta": -2, "durationTurns": 2 }],
-          "text": "Te hace perder tiempo discutiendo… y esos segundos duelen."
-        }
-      ],
-      "introText": "Marc aparece con el sol en la cara y cero respeto."
+[
+  {
+    "id": "boss_marc",
+    "name": "Marc",
+    "order": 1,
+    "stats": {
+      "hp": 100,
+      "speed": 8,
+      "damage": 15,
+      "armor": 3
     },
-
-    {
-      "id": "boss_liam",
-      "name": "Liam",
-      "order": 2,
-      "stats": { "hp": 230, "speed": 8, "damage": 17, "armor": 12 },
-      "attacks": [
-        {
-          "id": "atk_liam_nails",
-          "name": "Pintarse las uñas",
-          "type": "buff",
-          "power": 0,
-          "target": "self",
-          "effects": [{ "stat": "armor", "delta": 4, "durationTurns": 3 }],
-          "text": "Se sube la autoestima. Tú no."
-        },
-        {
-          "id": "atk_liam_fakecry",
-          "name": "Falso llanto",
-          "type": "debuff",
-          "power": 0,
-          "target": "player",
-          "effects": [{ "stat": "damage", "delta": -3, "durationTurns": 2 }],
-          "text": "Te hace sentir culpable. Pegas menos por pena."
-        },
-        {
-          "id": "atk_liam_attention",
-          "name": "Llamada de atención",
-          "type": "damage",
-          "power": 15,
-          "target": "player",
-          "text": "Te interrumpe la vida. Y también la barra de HP."
-        },
-        {
-          "id": "atk_liam_giri",
-          "name": "Copular con una giri",
-          "type": "buff",
-          "power": 0,
-          "target": "self",
-          "effects": [{ "stat": "speed", "delta": 3, "durationTurns": 2 }],
-          "text": "Se viene arriba. Literalmente."
-        }
-      ],
-      "introText": "Liam te juzga con una uña perfectamente pintada."
+    "attacks": [
+      { "name": "Porrillo al sol", "damage": 12 },
+      { "name": "La penta se ganaaaaa", "damage": 16 }
+    ]
+  },
+  {
+    "id": "boss_liam",
+    "name": "Liam",
+    "order": 2,
+    "stats": {
+      "hp": 120,
+      "speed": 10,
+      "damage": 17,
+      "armor": 4
     },
-
-    {
-      "id": "boss_felipe",
-      "name": "Felipe",
-      "order": 3,
-      "stats": { "hp": 250, "speed": 7, "damage": 20, "armor": 14 },
-      "attacks": [
-        {
-          "id": "atk_felipe_steroids",
-          "name": "Esteroides",
-          "type": "buff",
-          "power": 0,
-          "target": "self",
-          "effects": [{ "stat": "damage", "delta": 4, "durationTurns": 3 }],
-          "text": "Se pone modo gimnasio. Tú modo hospital."
-        },
-        {
-          "id": "atk_felipe_lifts",
-          "name": "¿Cuánto levantas?",
-          "type": "damage",
-          "power": 17,
-          "target": "player",
-          "text": "Te humilla y te pega. En ese orden."
-        },
-        {
-          "id": "atk_felipe_10k",
-          "name": "10K",
-          "type": "damage",
-          "power": 19,
-          "target": "player",
-          "text": "Corre hacia ti como si le debieras dinero."
-        },
-        {
-          "id": "atk_felipe_drugs",
-          "name": "Drogarse",
-          "type": "buff",
-          "power": 0,
-          "target": "self",
-          "effects": [{ "stat": "speed", "delta": 3, "durationTurns": 2 }],
-          "text": "No preguntas de dónde sale. Solo corre."
-        }
-      ],
-      "introText": "Felipe entra al combate como si esto fuera el gimnasio."
+    "attacks": [
+      { "name": "Pintarse las uñas", "damage": 14 },
+      { "name": "Falso llanto", "damage": 18 }
+    ]
+  },
+  {
+    "id": "boss_felipe",
+    "name": "Felipe",
+    "order": 3,
+    "stats": {
+      "hp": 150,
+      "speed": 12,
+      "damage": 20,
+      "armor": 6
     },
-
-    {
-      "id": "boss_lander",
-      "name": "Lander",
-      "order": 4,
-      "stats": { "hp": 260, "speed": 6, "damage": 21, "armor": 15 },
-      "attacks": [
-        {
-          "id": "atk_lander_diabetes",
-          "name": "Diabetes avanzada",
-          "type": "damage",
-          "power": 20,
-          "target": "player",
-          "text": "Te da un bajón de azúcar… pero en la cara."
-        },
-        {
-          "id": "atk_lander_door",
-          "name": "Te toca la puerta",
-          "type": "debuff",
-          "power": 0,
-          "target": "player",
-          "effects": [{ "stat": "speed", "delta": -2, "durationTurns": 2 }],
-          "text": "Te corta el rollo. Y el movimiento."
-        },
-        {
-          "id": "atk_lander_blood",
-          "name": "Sed de sangre",
-          "type": "damage",
-          "power": 18,
-          "target": "player",
-          "text": "Se viene arriba. Tú te vienes abajo."
-        },
-        {
-          "id": "atk_lander_deadpower",
-          "name": "Invoco el poder de los muertos (su ex)",
-          "type": "damage",
-          "power": 22,
-          "target": "player",
-          "text": "Una presencia oscura aparece. Tu HP desaparece."
-        }
-      ],
-      "introText": "Lander llega… y te toca la puerta del alma."
-    }
-  ]
-}
+    "attacks": [
+      { "name": "Esteroides", "damage": 22 },
+      { "name": "10K", "damage": 26 }
+    ]
+  },
+  {
+    "id": "boss_lander",
+    "name": "Lander",
+    "order": 4,
+    "stats": {
+      "hp": 200,
+      "speed": 14,
+      "damage": 25,
+      "armor": 10
+    },
+    "attacks": [
+      { "name": "Diabetes Avanzada", "damage": 20 },
+      { "name": "Invoco el poder de los muertos", "damage": 30 }
+    ]
+  }
+]

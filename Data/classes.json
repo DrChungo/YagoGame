@@ -1,25 +1,47 @@
-{
-  "classes": [
-    {
-      "id": "class_yago_sleepy",
-      "name": "Yago dormilón",
-      "baseStats": { "hp": 110, "speed": 6, "damage": 12, "armor": 14 },
-      "startingSkills": ["skill_mute", "skill_bedtime"],
-      "description": "Empieza con más armadura y la técnica secreta: cama."
+[
+  {
+    "id": "yago_dormilon",
+    "name": "Yago Dormilón",
+    "description": "Siempre cansado, pero resistente.",
+    "baseStats": {
+      "hp": 100,
+      "speed": 5,
+      "damage": 8,
+      "armor": 5
     },
-    {
-      "id": "class_yago_hot",
-      "name": "Yago caliente",
-      "baseStats": { "hp": 95, "speed": 8, "damage": 16, "armor": 10 },
-      "startingSkills": ["skill_mute", "skill_callar_lander"],
-      "description": "Más daño. Menos paciencia."
+    "startingSkills": [
+      "mutearse",
+      "irse_a_la_cama"
+    ]
+  },
+  {
+    "id": "yago_caliente",
+    "name": "Yago Caliente",
+    "description": "Habla rápido y pega antes.",
+    "baseStats": {
+      "hp": 90,
+      "speed": 8,
+      "damage": 9,
+      "armor": 2
     },
-    {
-      "id": "class_yago_sad",
-      "name": "Yago tristón",
-      "baseStats": { "hp": 125, "speed": 5, "damage": 11, "armor": 11 },
-      "startingSkills": ["skill_mute", "skill_anorar"],
-      "description": "Más vida. Más drama."
-    }
-  ]
-}
+    "startingSkills": [
+      "mutearse",
+      "callar_a_lander"
+    ]
+  },
+  {
+    "id": "yago_triston",
+    "name": "Yago Tristón",
+    "description": "Aguanta más porque ya ha sufrido.",
+    "baseStats": {
+      "hp": 120,
+      "speed": 4,
+      "damage": 7,
+      "armor": 3
+    },
+    "startingSkills": [
+      "mutearse",
+      "añorar"
+    ]
+  }
+]

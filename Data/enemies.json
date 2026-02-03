@@ -1,24 +1,62 @@
-{
-  "enemies": [
-    {
-      "id": "enemy_gitanillo_manos",
-      "name": "Gitanillo del manos",
-      "tier": 1,
-      "stats": {
-        "hp": 35,
-        "speed": 7,
-        "damage": 10,
-        "armor": 4
-      },
-      "attack": {
-        "id": "atk_navajazo",
-        "name": "Navajazo",
-        "type": "damage",
-        "power": 10,
-        "target": "player",
-        "text": "Un corte rápido y nada amistoso."
-      },
-      "description": "Te mira raro. Mala señal."
+[
+  {
+    "id": "salma",
+    "name": "Salma",
+    "tier": 1,
+    "stats": {
+      "hp": 18,
+      "speed": 6,
+      "damage": 5,
+      "armor": 0
+    },
+    "attack": {
+      "name": "Mirada incómoda",
+      "damage": 5
     }
-  ]
-}
+  },
+  {
+    "id": "belchu_12am",
+    "name": "Belchu a las 12 AM",
+    "tier": 2,
+    "stats": {
+      "hp": 30,
+      "speed": 8,
+      "damage": 8,
+      "armor": 2
+    },
+    "attack": {
+      "name": "Emotea sin parar",
+      "damage": 8
+    }
+  },
+  {
+    "id": "janire",
+    "name": "Janire",
+    "tier": 3,
+    "stats": {
+      "hp": 45,
+      "speed": 10,
+      "damage": 12,
+      "armor": 3
+    },
+    "attack": {
+      "name": "Mentir en GTA",
+      "damage": 12
+    }
+  },
+  {
+    "id": "jenny",
+    "name": "Jenny",
+    "tier": 4,
+    "stats": {
+      "hp": 70,
+      "speed": 14,
+      "damage": 18,
+      "armor": 5
+    },
+    "attack": {
+      "name": "Toxicidad",
+      "damage": 18
+    }
+  }
+]

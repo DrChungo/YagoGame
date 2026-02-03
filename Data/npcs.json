@@ -1,42 +1,31 @@
-{
-  "npcs": [
-    {
-      "id": "npc_santi_shop",
-      "name": "Santi",
-      "role": "Tienda",
-      "trigger": "afterRoomChance",
-      "text": "Eeeh primo, mira lo que tengo por aquí...",
-      "event": { "type": "shop", "shopPoolId": "shopPool_basic" }
+[
+  {
+    "id": "santi_shop",
+    "name": "Santi",
+    "type": "shop",
+    "chance": 0.15,
+    "description": "Er gitano tiene de to."
+  },
+  {
+    "id": "erik_event",
+    "name": "Erik",
+    "type": "post_boss",
+    "description": "Te dice lo guapo que estás y se pira."
+  },
+  {
+    "id": "jordi_buff",
+    "name": "Jordi",
+    "type": "post_boss",
+    "effect": {
+      "hp": 10
     },
-    {
-      "id": "npc_jordi_buff",
-      "name": "Jordi",
-      "role": "PostBoss",
-      "trigger": "afterBoss",
-      "text": "Vente al baño. Te vas a poner como un toro.",
-      "event": {
-        "type": "buff",
-        "effects": [{ "stat": "hp", "delta": 10, "durationTurns": -1 }]
-      }
-    },
-    {
-      "id": "npc_erik_nothing",
-      "name": "Erik",
-      "role": "PostBoss",
-      "trigger": "afterBoss",
-      "text": "Tío qué guapo estás. Bueno me piro.",
-      "event": { "type": "none" }
-    },
-    {
-      "id": "npc_wali_psico",
-      "name": "Wali",
-      "role": "PostBoss",
-      "trigger": "afterBoss",
-      "text": "Te suelta un discurso infinito... Te ha psoificado.",
-      "event": {
-        "type": "normalizeStatsToLowest",
-        "message": "Te ha psoificado."
-      }
-    }
-  ]
-}
+    "description": "Vas con él al baño."
+  },
+  {
+    "id": "wali_event",
+    "name": "Wali",
+    "type": "post_boss",
+    "effect": "equalize_stats_lowest",
+    "description": "Te ha psoificado."
+  }
+]
