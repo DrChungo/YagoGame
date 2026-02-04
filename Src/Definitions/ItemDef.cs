@@ -1,18 +1,24 @@
-using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace RoguelikeYago.Src.Definitions
+namespace RoguelikeYago.Src.Definitions;
+
+public sealed class ItemDef
 {
-    public class ItemDef
-    {
-        [JsonPropertyName("id")] public string Id { get; set; } = "";
-        [JsonPropertyName("name")] public string Name { get; set; } = "";
-        [JsonPropertyName("tier")] public int Tier { get; set; }
+    [JsonPropertyName("id")]
+    public string Id { get; set; } = "";
 
-        // Bonos simples (si lo tenías así)
-        [JsonPropertyName("modifiers")] public StatModifierDef Modifiers { get; set; } = new();
+    [JsonPropertyName("name")]
+    public string Name { get; set; } = "";
 
-        // Opcional
-        [JsonPropertyName("tags")] public List<string> Tags { get; set; } = new();
-    }
+    [JsonPropertyName("tier")]
+    public int Tier { get; set; }
+
+    [JsonPropertyName("description")]
+    public string Description { get; set; } = "";
+
+    [JsonPropertyName("stats")]
+    public StatsDef Stats { get; set; } = new();
+
+    [JsonPropertyName("unique")]
+    public bool Unique { get; set; }
 }

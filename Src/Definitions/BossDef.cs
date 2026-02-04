@@ -1,19 +1,22 @@
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace RoguelikeYago.Src.Definitions
+namespace RoguelikeYago.Src.Definitions;
+
+public sealed class BossDef
 {
-    public class BossDef
-    {
-        [JsonPropertyName("id")] public string Id { get; set; } = "";
-        [JsonPropertyName("name")] public string Name { get; set; } = "";
+    [JsonPropertyName("id")]
+    public string Id { get; set; } = "";
 
-        // Orden/numero del boss en la run (1..4)
-        [JsonPropertyName("bossNumber")] public int BossNumber { get; set; }
+    [JsonPropertyName("name")]
+    public string Name { get; set; } = "";
 
-        [JsonPropertyName("stats")] public StatsDef Stats { get; set; } = new();
+    [JsonPropertyName("order")]
+    public int Order { get; set; }
 
-        // ✅ Boss skills embebidas (player no las aprende)
-        [JsonPropertyName("skills")] public List<EmbeddedSkillDef> Skills { get; set; } = new();
-    }
+    [JsonPropertyName("stats")]
+    public StatsDef Stats { get; set; } = new();
+
+    [JsonPropertyName("attacks")]
+    public List<AttackDef> Attacks { get; set; } = new();
 }

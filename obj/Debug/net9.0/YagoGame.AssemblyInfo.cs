@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("YagoGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bf80c8f207e0e31746be774f83dc27b8ae27c2e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71da72242fb197cefee64da52e210c12df356170")]
 [assembly: System.Reflection.AssemblyProductAttribute("YagoGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("YagoGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

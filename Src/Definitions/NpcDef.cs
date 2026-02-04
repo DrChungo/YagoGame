@@ -1,19 +1,25 @@
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace RoguelikeYago.Src.Definitions
+namespace RoguelikeYago.Src.Definitions;
+
+public sealed class NpcDef
 {
-    public class NpcDef
-    {
-        [JsonPropertyName("id")] public string Id { get; set; } = "";
-        [JsonPropertyName("name")] public string Name { get; set; } = "";
+    [JsonPropertyName("id")]
+    public string Id { get; set; } = "";
 
-        // Texto que ve el jugador
-        [JsonPropertyName("dialogue")] public string Dialogue { get; set; } = "";
+    [JsonPropertyName("name")]
+    public string Name { get; set; } = "";
 
-        // Buff/debuff fijo (simple)
-        [JsonPropertyName("modifier")] public StatModifierDef Modifier { get; set; } = new();
+    [JsonPropertyName("type")]
+    public string Type { get; set; } = "";
 
-        // Opcional: tipo de evento ("afterBoss", "shopChance", etc.)
-        [JsonPropertyName("eventType")] public string EventType { get; set; } = "";
-    }
+    [JsonPropertyName("chance")]
+    public double? Chance { get; set; }
+
+    [JsonPropertyName("effect")]
+    public JsonElement Effect { get; set; }
+
+    [JsonPropertyName("description")]
+    public string Description { get; set; } = "";
 }

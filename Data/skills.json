@@ -26,5 +26,27 @@
     "tier": 4,
     "damage": 28,
     "description": "Devastador."
-  }
+  },
+  {
+  "id": "irse_a_la_cama",
+  "name": "Irse a la cama",
+  "tier": 1,
+  "damage": 6,
+  "description": "Te vas a dormir sin ganas, pero el golpe entra."
+},
+{
+  "id": "callar_a_lander",
+  "name": "Callar a Lander",
+  "tier": 2,
+  "damage": 9,
+  "description": "Un golpe seco para que se calle de una vez."
+},
+{
+  "id": "añorar",
+  "name": "Añorar",
+  "tier": 1,
+  "damage": 5,
+  "description": "Recuerdas tiempos mejores y atacas con melancolía."
+}
+
 ]
