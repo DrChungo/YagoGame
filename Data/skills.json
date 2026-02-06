@@ -188,13 +188,7 @@
     "damage": 20,
     "description": "Nunca pasa nada."
   },
-  {
-    "id": "anorar",
-    "name": "Añorar",
-    "tier": 3,
-    "damage": 18,
-    "description": "Segundo ataque básico del Yago tristón."
-  },
+
   {
     "id": "fotillo_rafa",
     "name": "Fotillo del Rafa",
