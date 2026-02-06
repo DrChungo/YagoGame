@@ -7,6 +7,20 @@
     "description": "Ataque básico de Yago."
   },
   {
+    "id": "callar_a_lander",
+    "name": "Callar a Lander",
+    "tier": 1,
+    "damage": 10,
+    "description": "Segundo ataque básico del Yago caliente."
+  },
+  {
+    "id": "anorar",
+    "name": "Añorar",
+    "tier": 3,
+    "damage": 18,
+    "description": "Segundo ataque básico del Yago tristón."
+  },
+  {
     "id": "hazte_un_trompo",
     "name": "Hazte un trompo",
     "tier": 1,
@@ -69,7 +83,6 @@
     "damage": 10,
     "description": "Contra todo pronóstico."
   },
-
   {
     "id": "liarse_un_porrillo",
     "name": "Liarse un porrillo",
@@ -140,7 +153,6 @@
     "damage": 13,
     "description": "Molesto pero eficaz."
   },
-
   {
     "id": "coser_bocas",
     "name": "Coser bocas",
@@ -183,7 +195,6 @@
     "damage": 18,
     "description": "Segundo ataque básico del Yago tristón."
   },
-
   {
     "id": "fotillo_rafa",
     "name": "Fotillo del Rafa",
