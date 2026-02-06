@@ -7,12 +7,140 @@
     "description": "Ataque básico de Yago."
   },
   {
+    "id": "hazte_un_trompo",
+    "name": "Hazte un trompo",
+    "tier": 1,
+    "damage": 8,
+    "description": "Das vueltas sin sentido pero duele."
+  },
+  {
+    "id": "irse_a_la_cama",
+    "name": "Irse a la cama",
+    "tier": 1,
+    "damage": 10,
+    "description": "Segundo ataque básico del Yago dormilón."
+  },
+  {
+    "id": "charla_politica",
+    "name": "Charla sobre política",
+    "tier": 1,
+    "damage": 9,
+    "description": "Pesado pero constante."
+  },
+  {
+    "id": "afeitarse_cabeza",
+    "name": "Afeitarse la cabeza",
+    "tier": 1,
+    "damage": 10,
+    "description": "Nuevo look, mismo cabreo."
+  },
+  {
+    "id": "alejarse_novia",
+    "name": "Alejarse por tu novia",
+    "tier": 1,
+    "damage": 9,
+    "description": "Te aíslas del mundo."
+  },
+  {
+    "id": "romper_pacto",
+    "name": "Romper el pacto",
+    "tier": 1,
+    "damage": 10,
+    "description": "Traición básica."
+  },
+  {
+    "id": "verse_arcane_solo",
+    "name": "Verse Arcane solo",
+    "tier": 1,
+    "damage": 9,
+    "description": "Duele más emocionalmente."
+  },
+  {
+    "id": "chapar_morro",
+    "name": "Chapar el morro",
+    "tier": 1,
+    "damage": 8,
+    "description": "Silencio incómodo."
+  },
+  {
+    "id": "roleo_correcto",
+    "name": "Rolear correctamente",
+    "tier": 1,
+    "damage": 10,
+    "description": "Contra todo pronóstico."
+  },
+
+  {
     "id": "liarse_un_porrillo",
     "name": "Liarse un porrillo",
     "tier": 2,
     "damage": 12,
     "description": "Vas más relajado, pero pegas."
   },
+  {
+    "id": "debate_politica",
+    "name": "Debate sobre política",
+    "tier": 2,
+    "damage": 14,
+    "description": "Más intenso que la charla."
+  },
+  {
+    "id": "wali_q",
+    "name": "Wali Q",
+    "tier": 2,
+    "damage": 13,
+    "description": "No sabes qué ha pasado, pero duele."
+  },
+  {
+    "id": "santiverso",
+    "name": "Santiverso",
+    "tier": 2,
+    "damage": 14,
+    "description": "Entras en otra realidad."
+  },
+  {
+    "id": "enganar",
+    "name": "Engañar",
+    "tier": 2,
+    "damage": 12,
+    "description": "No es verdad, pero cuela."
+  },
+  {
+    "id": "mentir",
+    "name": "Mentir",
+    "tier": 2,
+    "damage": 13,
+    "description": "La clásica."
+  },
+  {
+    "id": "roleo_gta",
+    "name": "Rolear en GTA",
+    "tier": 2,
+    "damage": 14,
+    "description": "Inmersión extrema."
+  },
+  {
+    "id": "mudarse_berlin",
+    "name": "Mudarse a Berlín",
+    "tier": 2,
+    "damage": 15,
+    "description": "Nueva vida, mismos problemas."
+  },
+  {
+    "id": "ir_a_votar",
+    "name": "Ir a votar",
+    "tier": 2,
+    "damage": 12,
+    "description": "No sirve de nada pero lo intentas."
+  },
+  {
+    "id": "incordiar",
+    "name": "Incordiar",
+    "tier": 2,
+    "damage": 13,
+    "description": "Molesto pero eficaz."
+  },
+
   {
     "id": "coser_bocas",
     "name": "Coser bocas",
@@ -21,32 +149,46 @@
     "description": "Ataque potente. Silencio absoluto."
   },
   {
+    "id": "aniadir_anios",
+    "name": "+3 años y subiendo",
+    "tier": 3,
+    "damage": 17,
+    "description": "El tiempo pasa factura."
+  },
+  {
+    "id": "odiar_mujeres",
+    "name": "Odiar a las mujeres",
+    "tier": 3,
+    "damage": 18,
+    "description": "Te echas novia mora."
+  },
+  {
+    "id": "odiar_psoe",
+    "name": "Odiar al PSOE",
+    "tier": 3,
+    "damage": 19,
+    "description": "Te enciendes solo."
+  },
+  {
+    "id": "caso_aislado",
+    "name": "Caso aislado",
+    "tier": 3,
+    "damage": 20,
+    "description": "Nunca pasa nada."
+  },
+  {
+    "id": "anorar",
+    "name": "Añorar",
+    "tier": 3,
+    "damage": 18,
+    "description": "Segundo ataque básico del Yago tristón."
+  },
+
+  {
     "id": "fotillo_rafa",
     "name": "Fotillo del Rafa",
     "tier": 4,
     "damage": 28,
     "description": "Devastador."
-  },
-  {
-  "id": "irse_a_la_cama",
-  "name": "Irse a la cama",
-  "tier": 1,
-  "damage": 6,
-  "description": "Te vas a dormir sin ganas, pero el golpe entra."
-},
-{
-  "id": "callar_a_lander",
-  "name": "Callar a Lander",
-  "tier": 2,
-  "damage": 9,
-  "description": "Un golpe seco para que se calle de una vez."
-},
-{
-  "id": "añorar",
-  "name": "Añorar",
-  "tier": 1,
-  "damage": 5,
-  "description": "Recuerdas tiempos mejores y atacas con melancolía."
-}
-
+  }
 ]

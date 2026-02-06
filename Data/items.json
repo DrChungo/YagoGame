@@ -4,51 +4,267 @@
     "name": "Pintauñas de Liam",
     "tier": 1,
     "description": "Te hace parecer más femenino.",
-    "stats": {
-      "hp": 10,
-      "speed": 0,
-      "damage": 0,
-      "armor": 0
-    },
+    "stats": { "hp": 10, "speed": 0, "damage": 0, "armor": 0 },
     "unique": false
   },
+  {
+    "id": "camiseta_erik",
+    "name": "Camiseta de Erik",
+    "tier": 1,
+    "description": "Camiseta que rompió Felipe.",
+    "stats": { "hp": 0, "speed": 0, "damage": 0, "armor": 10 },
+    "unique": false
+  },
+  {
+    "id": "aguja_jordi",
+    "name": "Aguja de Jordi",
+    "tier": 1,
+    "description": "Te cose la puta boca.",
+    "stats": { "hp": 0, "speed": 0, "damage": 10, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "billete_egipto",
+    "name": "Billete a Egipto",
+    "tier": 1,
+    "description": "Leo no ha firmado nada, no piensa ir.",
+    "stats": { "hp": 0, "speed": 0, "damage": -10, "armor": 10 },
+    "unique": false
+  },
+  {
+    "id": "pastilla_m",
+    "name": "Pastilla de M",
+    "tier": 1,
+    "description": "Pastilla que no sabes de dónde ha salido.",
+    "stats": { "hp": 0, "speed": 10, "damage": 0, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "pollo_coca",
+    "name": "Pollo de coca",
+    "tier": 1,
+    "description": "Te acelera, pero te pasa factura.",
+    "stats": { "hp": -10, "speed": 10, "damage": 0, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "novia_china",
+    "name": "Echarse novia china",
+    "tier": 1,
+    "description": "Amor verdadero, DPS falso.",
+    "stats": { "hp": 10, "speed": 0, "damage": -10, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "casa_ramas",
+    "name": "Casa de Ramas",
+    "tier": 1,
+    "description": "No sabes quién se la va a quedar.",
+    "stats": { "hp": 10, "speed": 0, "damage": 0, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "sidrita",
+    "name": "Sidrita",
+    "tier": 1,
+    "description": "NOCHE DE SIDRITAS!!!",
+    "stats": { "hp": 10, "speed": 0, "damage": 0, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "diez_euros_belchu",
+    "name": "Los 10 € de Belchu",
+    "tier": 1,
+    "description": "No te quiere dar los 10 €.",
+    "stats": { "hp": 10, "speed": 0, "damage": 0, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "rompe_armario",
+    "name": "Rompe armario",
+    "tier": 1,
+    "description": " No te has tomado la medicación.",
+    "stats": { "hp": -10, "speed": 0, "damage": 20, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "monster_erik",
+    "name": "Monster de Erik",
+    "tier": 1,
+    "description": "Colección de monsters.",
+    "stats": { "hp": 0, "speed": 10, "damage": 0, "armor": -10 },
+    "unique": false
+  },
+
   {
     "id": "coche_emilio",
     "name": "Coche de Emilio",
     "tier": 2,
     "description": "No se sabe cómo llegó ahí pero dio una vuelta de campana.",
-    "stats": {
-      "hp": -10,
-      "speed": 10,
-      "damage": 0,
-      "armor": 0
-    },
+    "stats": { "hp": -10, "speed": 10, "damage": 0, "armor": 0 },
     "unique": false
   },
+  {
+    "id": "merca_tato",
+    "name": "Merca del Tato",
+    "tier": 2,
+    "description": "Te pega tal ostia que te deja volando.",
+    "stats": { "hp": 0, "speed": -10, "damage": 10, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "volante_erik",
+    "name": "Volante de Erik",
+    "tier": 2,
+    "description": "no sabews cuando volvera tu coche.",
+    "stats": { "hp": 0, "speed": 10, "damage": -10, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "porro_marc",
+    "name": "Porro de Marc",
+    "tier": 2,
+    "description": "Vas volando.",
+    "stats": { "hp": 0, "speed": -10, "damage": 10, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "meado_santi",
+    "name": "Meado del Santi",
+    "tier": 2,
+    "description": "No sabes por qué pero no para de mearse.",
+    "stats": { "hp": 0, "speed": 0, "damage": 0, "armor": 10 },
+    "unique": false
+  },
+  {
+    "id": "navaja_gitano",
+    "name": "Navaja del gitano",
+    "tier": 2,
+    "description": " Er gitano de la esquina casi te apuñala.",
+    "stats": { "hp": -10, "speed": 0, "damage": 10, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "leo_balenciaga",
+    "name": "Leo cantando \"Tu jeba Balenciaga\"",
+    "tier": 2,
+    "description": "+Speed. No veas qué flow me lleva.",
+    "stats": { "hp": 0, "speed": 10, "damage": 0, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "piercing_lengua",
+    "name": "Piercing en lengua",
+    "tier": 2,
+    "description": "+Armor. No sabes por qué pero a las menores les encanta.",
+    "stats": { "hp": 0, "speed": 0, "damage": 0, "armor": 10 },
+    "unique": false
+  },
+
   {
     "id": "pastilla_felipe",
     "name": "Pastilla de Felipe",
     "tier": 3,
     "description": "Ojalá te pegara como a él.",
-    "stats": {
-      "hp": 0,
-      "speed": 0,
-      "damage": 15,
-      "armor": 0
-    },
+    "stats": { "hp": 0, "speed": 0, "damage": 15, "armor": 0 },
     "unique": false
   },
+  {
+    "id": "voto_wali",
+    "name": "Voto de Wali",
+    "tier": 3,
+    "description": "Claramente sabes qué pone en el voto.",
+    "stats": { "hp": 0, "speed": -10, "damage": 0, "armor": 25 },
+    "unique": false
+  },
+  {
+    "id": "bailecito_jordi",
+    "name": "Bailecito Jordi",
+    "tier": 3,
+    "description": "Mira qué flow se lleva.",
+    "stats": { "hp": 0, "speed": 25, "damage": 0, "armor": -10 },
+    "unique": false
+  },
+  {
+    "id": "bozal_lander",
+    "name": "Bozal para Lander",
+    "tier": 3,
+    "description": "CALLATE LANDER!!!",
+    "stats": { "hp": 0, "speed": 0, "damage": 0, "armor": 25 },
+    "unique": false
+  },
+  {
+    "id": "coche_quemado",
+    "name": "Coche quemado",
+    "tier": 3,
+    "description": "Belchu no sabe conducir.",
+    "stats": { "hp": 0, "speed": -25, "damage": 0, "armor": 25 },
+    "unique": false
+  },
+  {
+    "id": "clash_mini",
+    "name": "Del Clash Mini",
+    "tier": 3,
+    "description": "Del clash mini LOKOO.",
+    "stats": { "hp": -10, "speed": 25, "damage": 0, "armor": 0 },
+    "unique": false
+  },
+
   {
     "id": "pelo_moi",
     "name": "Pelo de Moi",
     "tier": 4,
     "description": "El legendario pelo del salvador.",
-    "stats": {
-      "hp": 0,
-      "speed": 0,
-      "damage": 0,
-      "armor": 25
-    },
+    "stats": { "hp": 0, "speed": 0, "damage": 0, "armor": 25 },
+    "unique": true
+  },
+  {
+    "id": "roncola_emilio",
+    "name": "Roncola de Emilio",
+    "tier": 4,
+    "description": "Te pega una que flipas.",
+    "stats": { "hp": -10, "speed": 0, "damage": 25, "armor": 0 },
+    "unique": true
+  },
+  {
+    "id": "bigote_jordi",
+    "name": "Bigote de Jordi",
+    "tier": 4,
+    "description": "Te da seguridad en ti mismo, sientes que puedes copular con quien quieras.",
+    "stats": { "hp": 25, "speed": 0, "damage": 0, "armor": 0 },
+    "unique": true
+  },
+
+  {
+    "id": "teclado_lucas",
+    "name": "Teclado de Lucas",
+    "tier": 1,
+    "description": "Sientes el ligero poder del dios del gaming. (Parte del set de Lucas)",
+    "stats": { "hp": 0, "speed": 0, "damage": 10, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "raton_lucas",
+    "name": "Ratón de Lucas",
+    "tier": 2,
+    "description": " Sientes que puedes estar en todos lados. (Parte del set de Lucas)",
+    "stats": { "hp": 0, "speed": 10, "damage": 0, "armor": 0 },
+    "unique": false
+  },
+  {
+    "id": "pc_lucas",
+    "name": "PC de Lucas",
+    "tier": 3,
+    "description": " La vida va a 24000000 hz. (Parte del set de Lucas)",
+    "stats": { "hp": 0, "speed": 0, "damage": 0, "armor": 15 },
+    "unique": false
+  },
+  {
+    "id": "monitor_lucas",
+    "name": "Monitor de Lucas",
+    "tier": 4,
+    "description": " Lo puedes ver todo. (Parte del set de Lucas)",
+    "stats": { "hp": 25, "speed": 0, "damage": 0, "armor": 0 },
     "unique": true
   }
 ]

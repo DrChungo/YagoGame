@@ -11,7 +11,9 @@
     },
     "attacks": [
       { "name": "Porrillo al sol", "damage": 12 },
-      { "name": "La penta se ganaaaaa", "damage": 16 }
+      { "name": "La penta se ganaaaaa", "damage": 16 },
+      { "name": "Puto hooooobit", "damage": 18 },
+      { "name": "Los 10 €", "damage": 20 }
     ]
   },
   {
@@ -26,7 +28,9 @@
     },
     "attacks": [
       { "name": "Pintarse las uñas", "damage": 14 },
-      { "name": "Falso llanto", "damage": 18 }
+      { "name": "Falso llanto", "damage": 18 },
+      { "name": "Llamada de atención", "damage": 20 },
+      { "name": "Copular con una guiri", "damage": 22 }
     ]
   },
   {
@@ -41,7 +45,9 @@
     },
     "attacks": [
       { "name": "Esteroides", "damage": 22 },
-      { "name": "10K", "damage": 26 }
+      { "name": "¿Cuánto levantas?", "damage": 24 },
+      { "name": "10K", "damage": 26 },
+      { "name": "Drogarse", "damage": 28 }
     ]
   },
   {
@@ -56,7 +62,9 @@
     },
     "attacks": [
       { "name": "Diabetes Avanzada", "damage": 20 },
-      { "name": "Invoco el poder de los muertos", "damage": 30 }
+      { "name": "Te toca la puerta", "damage": 24 },
+      { "name": "Sed de sangre", "damage": 28 },
+      { "name": "Invoco el poder de los muertos", "damage": 32 }
     ]
   }
 ]
