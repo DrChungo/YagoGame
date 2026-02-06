@@ -21,18 +21,18 @@
     "description": "Segundo ataque básico del Yago tristón."
   },
   {
-    "id": "hazte_un_trompo",
-    "name": "Hazte un trompo",
-    "tier": 1,
-    "damage": 8,
-    "description": "Das vueltas sin sentido pero duele."
-  },
-  {
     "id": "irse_a_la_cama",
     "name": "Irse a la cama",
     "tier": 1,
     "damage": 10,
     "description": "Segundo ataque básico del Yago dormilón."
+  },
+  {
+    "id": "hazte_un_trompo",
+    "name": "Hazte un trompo",
+    "tier": 1,
+    "damage": 8,
+    "description": "Das vueltas sin sentido pero duele."
   },
   {
     "id": "charla_politica",
@@ -188,7 +188,6 @@
     "damage": 20,
     "description": "Nunca pasa nada."
   },
-
   {
     "id": "fotillo_rafa",
     "name": "Fotillo del Rafa",

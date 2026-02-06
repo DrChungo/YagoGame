@@ -13,3 +13,18 @@ C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\YagoGame.pdb
 C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\YagoGame.genruntimeconfig.cache
 C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\ref\YagoGame.dll
 C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\obj\Debug\net9.0\YagoGame.sourcelink.json
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\obj\Debug\net9.0\YagoGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\obj\Debug\net9.0\YagoGame.AssemblyInfoInputs.cache
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\obj\Debug\net9.0\YagoGame.AssemblyInfo.cs
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\obj\Debug\net9.0\YagoGame.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\obj\Debug\net9.0\YagoGame.sourcelink.json
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\obj\Debug\net9.0\YagoGame.dll
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\obj\Debug\net9.0\refint\YagoGame.dll
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\obj\Debug\net9.0\YagoGame.pdb
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\bin\Debug\net9.0\YagoGame.exe
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\bin\Debug\net9.0\YagoGame.deps.json
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\bin\Debug\net9.0\YagoGame.runtimeconfig.json
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\bin\Debug\net9.0\YagoGame.dll
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\bin\Debug\net9.0\YagoGame.pdb
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\obj\Debug\net9.0\YagoGame.genruntimeconfig.cache
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\obj\Debug\net9.0\ref\YagoGame.dll

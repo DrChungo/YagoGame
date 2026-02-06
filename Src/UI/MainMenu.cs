@@ -1,60 +1,74 @@
 using System;
-using RoguelikeYago.Src.Services;
+using RoguelikeYago.Src.Combat;
+using RoguelikeYago.Src.Definitions;
 
 namespace RoguelikeYago.Src.UI;
 
 public static class MainMenu
 {
-    public static void Show(ContentStore content, GameRng rng)
+    // ==========================
+    // FASE 0 – MENÚ PRINCIPAL
+    // ==========================
+    public static void Show()
     {
         bool exit = false;
 
         while (!exit)
         {
             Console.Clear();
-            Console.WriteLine("=== YAGO ROGUELIKE ===");
-            Console.WriteLine("1. Test: mostrar conteos + config");
+            Console.WriteLine("=== YAGO GAME ===");
+            Console.WriteLine("1. Test combate (FASE 1)");
             Console.WriteLine("0. Salir");
-            Console.Write("\nElige: ");
+            Console.Write("\nElige una opción: ");
 
-            var key = Console.ReadKey(true).KeyChar;
+            var key = Console.ReadKey(true).Key;
 
             switch (key)
             {
-                case '1':
-                    ShowCounts(content, rng);
+                // ==========================
+                // FASE 1 – TEST COMBATE 1v1
+                // ==========================
+                case ConsoleKey.D1:
+                case ConsoleKey.NumPad1:
+                    TestCombatPhase1();
                     break;
-                case '0':
+
+                // ==========================
+                // FASE 0 – SALIR
+                // ==========================
+                case ConsoleKey.D0:
+                case ConsoleKey.NumPad0:
                     exit = true;
                     break;
+
                 default:
                     Console.WriteLine("\nOpción no válida.");
-                    Console.ReadKey(true);
+                    Console.WriteLine("Pulsa una tecla para continuar...");
+                    Console.ReadKey();
                     break;
             }
         }
     }
 
-    private static void ShowCounts(ContentStore content, GameRng rng)
+ 
+    private static void TestCombatPhase1()
     {
-        Console.Clear();
-        Console.WriteLine("CONTENIDO CARGADO ✅\n");
+        // Stats hardcodeados a propósito en Fase 1 (sin JSON, sin RNG)
+        var playerStats = new StatsDef { Hp = 30, Speed = 5, Damage = 6, Armor = 0 };
+        var enemyStats  = new StatsDef { Hp = 20, Speed = 3, Damage = 4, Armor = 0 };
 
-        Console.WriteLine($"Seed usada: {rng.SeedUsed}");
-        Console.WriteLine($"Enemigos por sala: {content.Config.Game.EnemiesPerRoom}");
-        Console.WriteLine($"Salas entre boss: {content.Config.Game.RoomsBetweenBosses}");
-        Console.WriteLine($"Total bosses: {content.Config.Game.TotalBosses}");
-        Console.WriteLine($"Boss order: {string.Join(", ", content.Config.Run.BossOrder)}");
+        // Ataques fijos (enemigo 1 ataque, jugador 1 ataque) para test de la Fase 1
+        var playerAttack = new AttackDef { Name = "Golpe básico", Damage = 6 };
+        var enemyAttack  = new AttackDef { Name = "Mordisco", Damage = 4 };
 
-        Console.WriteLine("\n--- Conteos ---");
-        Console.WriteLine($"Clases:   {content.Classes.Count}");
-        Console.WriteLine($"Skills:   {content.Skills.Count}");
-        Console.WriteLine($"Enemigos: {content.Enemies.Count}");
-        Console.WriteLine($"Bosses:   {content.Bosses.Count}");
-        Console.WriteLine($"Items:    {content.Items.Count}");
-        Console.WriteLine($"NPCs:     {content.Npcs.Count}");
+        var combat = new CombatService();
+        combat.StartOneVsOne(playerStats, enemyStats, playerAttack, enemyAttack);
 
-        Console.WriteLine("\nPulsa una tecla para volver...");
-        Console.ReadKey(true);
+        // Regla del PDF: tras combate, vida al máximo (en Fase 1 lo simulamos así)
+        playerStats.Hp = 30;
+
+        Console.WriteLine("\n(FASE 1) Combate terminado. Vida restaurada al máximo.");
+        Console.WriteLine("Pulsa una tecla para volver al menú...");
+        Console.ReadKey();
     }
 }
