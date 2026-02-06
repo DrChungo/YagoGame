@@ -150,7 +150,7 @@
   },
   {
     "id": "belchu_cita",
-    "name": "Belchu en cita",
+    "name": "Belchu en una cita",
     "tier": 4,
     "stats": { "hp": 70, "speed": 14, "damage": 18, "armor": 5 },
     "attack": { "name": "Pagas tú, ya te haré bizum", "damage": 18 }
