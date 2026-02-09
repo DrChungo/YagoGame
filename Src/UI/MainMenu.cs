@@ -24,6 +24,7 @@ public static class MainMenu
             Console.WriteLine("4. Sala por seed (FASE 4)");
             Console.WriteLine("5. Loop completo (FASE 5)");
             Console.WriteLine("6. Recompensas tras sala (FASE 6)");
+            Console.WriteLine("7. NPCs (FASE 7)");
             Console.WriteLine("0. Salir");
             Console.Write("\nElige una opción: ");
 
@@ -74,6 +75,10 @@ public static class MainMenu
                 case ConsoleKey.D6:
                 case ConsoleKey.NumPad6:
                     new Phase6Runner().Play();
+                    break;
+                case ConsoleKey.D7:
+                case ConsoleKey.NumPad7:
+                    new Phase7Runner().Play();
                     break;
 
                 // ==========================
