@@ -4,7 +4,7 @@ Roguelike en **C# consola** con combate por turnos, generación determinista por
 
 ---
 ## Ejecutar
-Clicka en code. despues en download ZIP. Una vez descargado ver a descargas en tu PC y descomprime el archivo. Abre la carpeta descomprimida y doble click en YagoGame.exe. A disfrutar crack.
+Clicka en code. despues en download ZIP. Una vez descargado ver a descargas en tu PC y descomprime el archivo. Abre la carpeta descomprimida y doble click en YagoGame.exe. A disfrutar crack 👍.
 
 
 En caso de que no funcione abre la consola de comandos en la carpeta y ejecura `dotne run`
