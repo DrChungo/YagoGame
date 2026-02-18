@@ -16,7 +16,7 @@ public class PlayerState
     {
         ClassId = classId;
         Stats = stats;
-        Skills = skills.Take(4).ToList(); // regla dura: máx 4 skills
+        Skills = skills.Take(4).ToList();
     }
 
     public void ReplaceSkill(SkillDef newSkill, int index)

@@ -2,9 +2,7 @@ using System.Text.Json.Serialization;
 
 namespace RoguelikeYago.Src.Config;
 
-// ==========================
-// FASE 4 – MODELOS CONFIG (MÍNIMO)
-// ==========================
+
 public class GameConfig
 {
     [JsonPropertyName("rng")]
@@ -13,7 +11,7 @@ public class GameConfig
     [JsonPropertyName("enemyGeneration")]
     public EnemyGenerationConfig EnemyGeneration { get; set; } = new();
 
-    //FASE 6
+
     [JsonPropertyName("drops")]
     public DropsConfig Drops { get; set; } = new();
 }

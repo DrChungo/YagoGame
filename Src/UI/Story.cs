@@ -5,55 +5,80 @@ namespace RoguelikeYago;
 
 internal static class Story
 {
-    //FASE 0
+    // FASE 0
     public static void Show()
     {
         Typewriter.WriteLine(
             @"
-Yago despierta una mañana cualquiera,
-con el cuerpo fuera de la cama…
-y el alma aún dentro.
+Yago se despierta como siempre, hecho mierda.
+
+Se levanta, va al baño medio dormido y cuando vuelve a la habitación…
+algo no cuadra.
 "
         );
 
         Typewriter.WriteLine(
             @"
-Todo parece normal hasta que, en un descuido imperdonable,
-el malvado Lander irrumpe en su casa
-y le roba lo más sagrado que posee:
+La cama no está.
+
+Se queda mirando el suelo unos segundos.
+Ni colchón.
+Ni almohada.
+Ni la sábana esa que no ha lavado en meses.
 "
         );
 
         Typewriter.WriteLine(
             @"
-SU CAMA.
+Nada.
 ",
             40
         );
 
         Typewriter.WriteLine(
             @"
-Sin cama no hay descanso.
-Sin descanso no hay vida.
-Y sin vida… no hay Yago.
+Después de procesarlo cinco segundos,
+solo puede llegar a una conclusión lógica:
+
+Ha sido Lander.
 "
         );
 
         Typewriter.WriteLine(
             @"
-Forzado a abandonar la comodidad de su santuario,
-Yago se ve arrastrado a una aventura absurda,
-caótica y peligrosa.
+Porque nadie más en el planeta tendría la cara
+de entrar a tu casa y llevarse la cama.
+No el móvil.
+No la tele.
+La cama.
 "
         );
 
         Typewriter.WriteLine(
             @"
-Porque hay héroes que luchan por gloria,
-otros por honor…
+Y claro, sin cama no puedes dormir.
+Sin dormir te rayas.
+Y si te rayas demasiado igual empiezas a madrugar.
 
-Y luego está Yago,
-que lucha por volver a la cama.
+Eso no puede pasar.
+"
+        );
+
+        Typewriter.WriteLine(
+            @"
+Así que, todavía en pijama y con cero ganas de existir,
+Yago decide que va a recuperarla.
+
+Le da igual quién se ponga delante.
+Le da igual cuánta gente rara haya por el camino.
+
+La cama vuelve a casa.
+
+Por lo civil…
+o por lo criminal.
+
+
+Pulsa una tecla para continuar...
 ",
             30
         );

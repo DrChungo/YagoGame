@@ -3,9 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace RoguelikeYago.Src.Config;
 
-// =======================================
-// FASE 4 – ENEMY GENERATION (tierWeights)
-// =======================================
+
 public class EnemyGenerationConfig
 {
     [JsonPropertyName("tierWeights")]

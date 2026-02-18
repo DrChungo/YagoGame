@@ -2,9 +2,9 @@ using System.Text.Json.Serialization;
 
 namespace RoguelikeYago.Src.Config;
 
-// ==========================
-// FASE 4 – RNG CONFIG (MÍNIMO)
-// ==========================
+
+// RNG CONFIG DE LA SEMILLA Default
+
 public class RngConfig
 {
     [JsonPropertyName("defaultSeed")]

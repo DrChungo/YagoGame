@@ -1,0 +1,2 @@
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\bin\Release\net9.0\linux-x64\publish\YagoGame.pdb
+C:\Users\Emiliano\Desktop\vsCode\DWES\YagoGame\bin\Release\net9.0\linux-x64\publish\YagoGame

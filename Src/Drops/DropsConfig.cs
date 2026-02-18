@@ -3,9 +3,8 @@ using System.Text.Json.Serialization;
 
 namespace RoguelikeYago.Src.Config;
 
-// ===================================
-// FASE 6 – CONFIG DE RECOMPENSAS (drops) 1:1
-// ===================================
+// CONFIG DE DROPS
+
 public class DropsConfig
 {
     [JsonPropertyName("uniqueItemsOncePerRun")]
