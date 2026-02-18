@@ -9,13 +9,13 @@ Clicka en code. despues en download ZIP. Una vez descargado ver a descargas en t
 
 En caso de que no funcione abre la consola de comandos en la carpeta y ejecura `dotne run`
 
-Paso 1: <img width="113" height="33" alt="image" src="https://github.com/user-attachments/assets/4ddf7bc7-73ed-4995-9001-dbf859724a7e" />
+Paso 1: <img width="113" height="33" alt="image" src="https://github.com/user-attachments/assets/4ddf7bc7-73ed-4995-9001-dbf859724a7e" /> =>  
 <img width="379" height="290" alt="image" src="https://github.com/user-attachments/assets/d8f9a10a-6342-424b-adb8-041d982bdd97" />
 
 
 
 Paso 2:
-<img width="147" height="27" alt="image" src="https://github.com/user-attachments/assets/2c82bdb4-64b7-45e8-ab1a-9d1b68cb7537" />
+<img width="147" height="27" alt="image" src="https://github.com/user-attachments/assets/2c82bdb4-64b7-45e8-ab1a-9d1b68cb7537" /> =>  
 <img width="337" height="463" alt="image" src="https://github.com/user-attachments/assets/bdd744ed-6fee-4723-96d0-2d804815659a" />
 
 Paso 3:
