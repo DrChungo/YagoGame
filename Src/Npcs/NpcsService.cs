@@ -5,16 +5,12 @@ using RoguelikeYago.Src.Definitions;
 
 namespace RoguelikeYago.Src.Npcs;
 
-// ===================================
-// FASE 7 – NPCs (shop + post-boss)
-// ===================================
+
 public class NpcService
 {
     public bool ShouldSpawnShop(Random rng)
     {
-        // ==========================
-        // FASE 7 – TIENDA 15%
-        // ==========================
+
         return rng.Next(1, 101) <= 15;
     }
 
@@ -25,9 +21,7 @@ public class NpcService
 
     public NpcDef PickPostBossNpc(IReadOnlyList<NpcDef> npcs)
     {
-        // ==========================
-        // FASE 7 – NPC POST-BOSS
-        // ==========================
+      
         var npc = npcs.FirstOrDefault(n =>
             string.Equals(n.Type, "post_boss", StringComparison.OrdinalIgnoreCase)
         );

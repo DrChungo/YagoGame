@@ -6,16 +6,11 @@ using RoguelikeYago.Src.UI;
 
 namespace RoguelikeYago.Src.Combat;
 
-// ==========================
-// FASE 1 – COMBATE 1v1 FIJO
-// FASE 3 – SALA 3 ENEMIGOS
-// ==========================
+
 public class CombatService
 {
-    // ==========================
-    // FASE 1 – COMBATE 1v1 FIJO
-    // ==========================
-    public void StartOneVsOne(
+  
+    public void Combat(
         StatsDef playerStats,
         StatsDef enemyStats,
         AttackDef playerAttack,
@@ -87,10 +82,6 @@ public class CombatService
         Console.ResetColor();
         Console.ReadKey(true);
     }
-
-    // ====================================
-    // FASE 3 – SALA CON 3 ENEMIGOS (3v1)
-    // ====================================
     public void StartThreeEnemiesRoom(
         StatsDef playerStats,
         AttackDef playerAttack,
@@ -169,9 +160,7 @@ public class CombatService
         Console.ReadKey(true);
     }
 
-    // ==========================
-    // FASE 3 – HELPERS
-    // ==========================
+ 
     private static void PlayerAct(
         StatsDef playerStats,
         AttackDef playerAttack,
@@ -276,9 +265,9 @@ public class CombatService
         Console.WriteLine(new string('═', 50) + "\n");
     }
 
-    // ==========================
+
     // UTILIDADES VISUALES
-    // ==========================
+   
     private static void PrintHeader(string title)
     {
         Console.WriteLine("\n" + new string('═', 50));
@@ -296,10 +285,9 @@ public class CombatService
         Console.ResetColor();
     }
 
-    // ==========================
-    // FASE 3 – MODELOS INTERNOS
-    // ==========================
-    public sealed class EnemyInstance
+    //MODELOS INTERNOS
+
+    public  class EnemyInstance
     {
         public string Name { get; }
         public StatsDef Stats { get; }
@@ -313,5 +301,5 @@ public class CombatService
         }
     }
 
-    private sealed record TurnActor(string Name, int Speed, bool IsPlayer, Action Act);
+    private  record TurnActor(string Name, int Speed, bool IsPlayer, Action Act);
 }

@@ -6,11 +6,11 @@ using RoguelikeYago.Src.Definitions;
 
 namespace RoguelikeYago.Src.Drops;
 
-// =======================================
-// FASE 6 – GENERACIÓN DE RECOMPENSAS (3)
-// =======================================
+
 public class RewardService
 {
+
+    //Funcion que genera las recompensas de la sala.
     public List<ItemDef> GenerateRoomRewards(
         IReadOnlyList<ItemDef> allItems,
         DropsConfig drops,
@@ -18,9 +18,7 @@ public class RewardService
         HashSet<string> uniqueItemIdsSeen
     )
     {
-        // ================================
-        // FASE 6 – DROPS DESDE afterRoom
-        // ================================
+
         var tierWeights = drops.AfterRoom.TierWeightsByType.Item;
 
         if (tierWeights == null || tierWeights.Count == 0)
@@ -38,7 +36,7 @@ public class RewardService
                 $"Config inválido en {PathConfig.ConfigFile} (campo: drops.afterRoom.tierWeightsByType.item). No hay pesos > 0."
             );
 
-        int count = 3; // PDF: 3 recompensas tras sala (Fase 6)
+        int count = 3;
 
         var results = new List<ItemDef>();
         int safety = 300;
@@ -69,16 +67,16 @@ public class RewardService
 
         return results;
     }
-
+//funcion que pide al jugador que elija una recompensa.
     public ItemDef AskPlayerToChoose(
         List<ItemDef> rewards,
         StatsDef currentStats,
         AttackDef currentAttack
     )
     {
-        // ==========================
-        // FASE 9 – RECOMPENSAS CON FLECHAS
-        // ==========================
+     
+        //  RECOMPENSAS CON FLECHAS
+ 
         var options = rewards
             .Select(it =>
             {

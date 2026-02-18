@@ -5,14 +5,11 @@ namespace RoguelikeYago.Src.Config;
 
 public static class PathConfig
 {
-    // ==========================================
-    // FASE 4 – RUTAS ROBUSTAS (sin romper APIs)
-    // ==========================================
-
+//Rutas de los archivos que ultilizamos.
     private static string? _rootDir;
 
-    // Mantengo el nombre "RootDir" porque tu proyecto ya lo usa.
-    // Ahora RootDir es la raíz real del proyecto (donde está /Data).
+ 
+
     public static string RootDir => _rootDir ??= FindProjectRoot();
 
     public static string DataDir => Path.Combine(RootDir, "Data");
@@ -26,19 +23,16 @@ public static class PathConfig
     public static string ItemsFile => Path.Combine(DataDir, "items.json");
     public static string NpcsFile => Path.Combine(DataDir, "npcs.json");
 
-    // 🔥 IMPORTANTE: esto lo necesita SaveService (ya existía)
+    // esto lo necesita SaveService (ya existía)
     public static string SaveFile(int slot) => Path.Combine(SavesDir, $"save_{slot}.json");
 
-    // ==========================
-    // FASE 4 – COMPATIBILIDAD CON SaveService
-    // ==========================
 
     private static string FindProjectRoot()
     {
-        // Empieza en bin/Debug/netX.X/
+  
         var dir = new DirectoryInfo(AppContext.BaseDirectory);
 
-        // Subimos hasta encontrar /Data/config.json
+   
         while (dir != null)
         {
             var candidate = Path.Combine(dir.FullName, "Data", "config.json");
