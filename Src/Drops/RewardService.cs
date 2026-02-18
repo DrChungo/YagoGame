@@ -9,86 +9,103 @@ namespace RoguelikeYago.Src.Drops;
 // =======================================
 // FASE 6 – GENERACIÓN DE RECOMPENSAS (3)
 // =======================================
-public sealed class RewardService
+public class RewardService
 {
     public List<ItemDef> GenerateRoomRewards(
-    IReadOnlyList<ItemDef> allItems,
-    DropsConfig drops,
-    Random rng,
-    HashSet<string> uniqueItemIdsSeen)
-{
-    // ================================
-    // FASE 6 – DROPS DESDE afterRoom
-    // ================================
-    var tierWeights = drops.AfterRoom.TierWeightsByType.Item;
-
-    if (tierWeights == null || tierWeights.Count == 0)
-        throw new InvalidOperationException(
-            $"Config inválido en {PathConfig.ConfigFile} (campo: drops.afterRoom.tierWeightsByType.item). Está vacío.");
-
-    var weights = tierWeights
-        .Select(kv => (tier: ParseTierOrThrow(kv.Key), weight: kv.Value))
-        .Where(x => x.weight > 0)
-        .ToList();
-
-    if (weights.Count == 0)
-        throw new InvalidOperationException(
-            $"Config inválido en {PathConfig.ConfigFile} (campo: drops.afterRoom.tierWeightsByType.item). No hay pesos > 0.");
-
-    int count = 3; // PDF: 3 recompensas tras sala (Fase 6)
-
-    var results = new List<ItemDef>();
-    int safety = 300;
-
-    while (results.Count < count && safety-- > 0)
+        IReadOnlyList<ItemDef> allItems,
+        DropsConfig drops,
+        Random rng,
+        HashSet<string> uniqueItemIdsSeen
+    )
     {
-        int tier = PickWeightedTier(weights, rng);
+        // ================================
+        // FASE 6 – DROPS DESDE afterRoom
+        // ================================
+        var tierWeights = drops.AfterRoom.TierWeightsByType.Item;
 
-        var pool = allItems
-            .Where(i => i.Tier == tier)
-            .Where(i => !results.Any(r => r.Id == i.Id))
-            .Where(i =>
-                !i.Unique ||
-                !drops.UniqueItemsOncePerRun ||
-                !uniqueItemIdsSeen.Contains(i.Id))
+        if (tierWeights == null || tierWeights.Count == 0)
+            throw new InvalidOperationException(
+                $"Config inválido en {PathConfig.ConfigFile} (campo: drops.afterRoom.tierWeightsByType.item). Está vacío."
+            );
+
+        var weights = tierWeights
+            .Select(kv => (tier: ParseTierOrThrow(kv.Key), weight: kv.Value))
+            .Where(x => x.weight > 0)
             .ToList();
 
-        if (pool.Count == 0) continue;
+        if (weights.Count == 0)
+            throw new InvalidOperationException(
+                $"Config inválido en {PathConfig.ConfigFile} (campo: drops.afterRoom.tierWeightsByType.item). No hay pesos > 0."
+            );
 
-        var pick = pool[rng.Next(pool.Count)];
-        results.Add(pick);
+        int count = 3; // PDF: 3 recompensas tras sala (Fase 6)
+
+        var results = new List<ItemDef>();
+        int safety = 300;
+
+        while (results.Count < count && safety-- > 0)
+        {
+            int tier = PickWeightedTier(weights, rng);
+
+            var pool = allItems
+                .Where(i => i.Tier == tier)
+                .Where(i => !results.Any(r => r.Id == i.Id))
+                .Where(i =>
+                    !i.Unique || !drops.UniqueItemsOncePerRun || !uniqueItemIdsSeen.Contains(i.Id)
+                )
+                .ToList();
+
+            if (pool.Count == 0)
+                continue;
+
+            var pick = pool[rng.Next(pool.Count)];
+            results.Add(pick);
+        }
+
+        if (results.Count < count)
+            throw new InvalidOperationException(
+                $"No hay suficientes items disponibles para generar {count} recompensas (revisa uniqueItemsOncePerRun y items.json)."
+            );
+
+        return results;
     }
 
-    if (results.Count < count)
-        throw new InvalidOperationException(
-            $"No hay suficientes items disponibles para generar {count} recompensas (revisa uniqueItemsOncePerRun y items.json).");
-
-    return results;
-}
-
-    public ItemDef AskPlayerToChoose(List<ItemDef> rewards)
+    public ItemDef AskPlayerToChoose(
+        List<ItemDef> rewards,
+        StatsDef currentStats,
+        AttackDef currentAttack
+    )
     {
-        Console.Clear();
-        Console.WriteLine("Elige una recompensa (FASE 6):\n");
+        // ==========================
+        // FASE 9 – RECOMPENSAS CON FLECHAS
+        // ==========================
+        var options = rewards
+            .Select(it =>
+            {
+                var parts = new List<string>();
+                if (it.Stats.Hp > 0)
+                    parts.Add($"HP {currentStats.Hp}->{currentStats.Hp + it.Stats.Hp}");
+                if (it.Stats.Speed > 0)
+                    parts.Add($"Speed {currentStats.Speed}->{currentStats.Speed + it.Stats.Speed}");
+                if (it.Stats.Damage > 0)
+                    parts.Add(
+                        $"Dmg {currentStats.Damage}->{currentStats.Damage + it.Stats.Damage}"
+                    );
+                if (it.Stats.Armor > 0)
+                    parts.Add($"Armor {currentStats.Armor}->{currentStats.Armor + it.Stats.Armor}");
 
-        for (int i = 0; i < rewards.Count; i++)
-        {
-            var it = rewards[i];
-            Console.WriteLine($"{i + 1}. {it.Name} (Tier {it.Tier})");
-            Console.WriteLine($"   {it.Description}");
-            Console.WriteLine();
-        }
+                string statsStr = parts.Count > 0 ? string.Join(", ", parts) : "Sin cambios";
+                return $"{it.Name} ({statsStr}) – {it.Description}";
+            })
+            .ToList();
 
-        while (true)
-        {
-            Console.Write("Opción (1-3): ");
-            var input = Console.ReadLine();
+        int choice = RoguelikeYago.Src.UI.ArrowMenu.Choose("Elige una recompensa:", options);
 
-            if (int.TryParse(input, out int v) && v >= 1 && v <= rewards.Count)
-                return rewards[v - 1];
+        // Si pulsa ESC, por simplicidad elegimos la primera
+        if (choice < 0)
+            choice = 0;
 
-            Console.WriteLine("Entrada inválida. Escribe 1, 2 o 3.");
-        }
+        return rewards[choice];
     }
 
     private static int PickWeightedTier(List<(int tier, int weight)> weights, Random rng)
@@ -100,7 +117,8 @@ public sealed class RewardService
         foreach (var w in weights)
         {
             acc += w.weight;
-            if (roll <= acc) return w.tier;
+            if (roll <= acc)
+                return w.tier;
         }
 
         return weights[^1].tier;
@@ -108,7 +126,10 @@ public sealed class RewardService
 
     private static int ParseTierOrThrow(string key)
     {
-        if (int.TryParse(key, out int t)) return t;
-        throw new InvalidOperationException($"Config inválido en drops (tierWeights key no es int): '{key}'.");
+        if (int.TryParse(key, out int t))
+            return t;
+        throw new InvalidOperationException(
+            $"Config inválido en drops (tierWeights key no es int): '{key}'."
+        );
     }
 }

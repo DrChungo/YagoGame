@@ -6,7 +6,7 @@ namespace RoguelikeYago.Src.Config;
 // ===================================
 // FASE 6 – CONFIG DE RECOMPENSAS (drops) 1:1
 // ===================================
-public sealed class DropsConfig
+public class DropsConfig
 {
     [JsonPropertyName("uniqueItemsOncePerRun")]
     public bool UniqueItemsOncePerRun { get; set; } = true;

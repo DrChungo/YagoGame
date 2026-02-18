@@ -3,8 +3,9 @@ using RoguelikeYago.Src.Config;
 using RoguelikeYago.Src.Definitions;
 
 namespace RoguelikeYago.Src.Services;
+
 //Fase 0
-public sealed class ContentService
+public class ContentService
 {
     private readonly JsonFileLoader _loader = new();
 
@@ -18,10 +19,10 @@ public sealed class ContentService
     public ContentService()
     {
         Classes = _loader.LoadList<ClassDef>(PathConfig.ClassesFile);
-        Skills  = _loader.LoadList<SkillDef>(PathConfig.SkillsFile);
+        Skills = _loader.LoadList<SkillDef>(PathConfig.SkillsFile);
         Enemies = _loader.LoadList<EnemyDef>(PathConfig.EnemiesFile);
-        Bosses  = _loader.LoadList<BossDef>(PathConfig.BossesFile);
-        Items   = _loader.LoadList<ItemDef>(PathConfig.ItemsFile);
-        Npcs    = _loader.LoadList<NpcDef>(PathConfig.NpcsFile);
+        Bosses = _loader.LoadList<BossDef>(PathConfig.BossesFile);
+        Items = _loader.LoadList<ItemDef>(PathConfig.ItemsFile);
+        Npcs = _loader.LoadList<NpcDef>(PathConfig.NpcsFile);
     }
 }

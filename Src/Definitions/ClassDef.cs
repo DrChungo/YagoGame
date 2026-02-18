@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace RoguelikeYago.Src.Definitions;
 
-public sealed class ClassDef
+public class ClassDef
 {
     [JsonPropertyName("id")]
     public string Id { get; set; } = "";

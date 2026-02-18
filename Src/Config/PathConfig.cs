@@ -28,9 +28,10 @@ public static class PathConfig
 
     // 🔥 IMPORTANTE: esto lo necesita SaveService (ya existía)
     public static string SaveFile(int slot) => Path.Combine(SavesDir, $"save_{slot}.json");
+
     // ==========================
-// FASE 4 – COMPATIBILIDAD CON SaveService
-// ==========================
+    // FASE 4 – COMPATIBILIDAD CON SaveService
+    // ==========================
 
     private static string FindProjectRoot()
     {
@@ -48,7 +49,8 @@ public static class PathConfig
         }
 
         throw new DirectoryNotFoundException(
-            "No se encontró la carpeta 'Data' en ningún padre de AppContext.BaseDirectory. " +
-            "Asegúrate de que existe 'Data/config.json' en la raíz del proyecto.");
+            "No se encontró la carpeta 'Data' en ningún padre de AppContext.BaseDirectory. "
+                + "Asegúrate de que existe 'Data/config.json' en la raíz del proyecto."
+        );
     }
 }

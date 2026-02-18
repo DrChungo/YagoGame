@@ -4,7 +4,7 @@ using RoguelikeYago.Src.Definitions;
 
 namespace RoguelikeYago.Src.Persistence;
 
-public sealed class SaveFile
+public class SaveFile
 {
     [JsonPropertyName("version")]
     public int Version { get; set; }

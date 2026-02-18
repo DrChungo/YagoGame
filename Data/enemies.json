@@ -3,193 +3,405 @@
     "id": "salma",
     "name": "Salma",
     "tier": 1,
-    "stats": { "hp": 18, "speed": 6, "damage": 5, "armor": 0 },
-    "attack": { "name": "Cambio repentino", "damage": 5 }
+    "stats": {
+      "hp": 18,
+      "speed": 6,
+      "damage": 5,
+      "armor": 0
+    },
+    "attack": {
+      "name": "Cambio repentino",
+      "damage": 5
+    }
   },
   {
     "id": "gitanillo_manos",
     "name": "Gitanillo del manos",
     "tier": 1,
-    "stats": { "hp": 18, "speed": 6, "damage": 5, "armor": 0 },
-    "attack": { "name": "Navajazo", "damage": 5 }
+    "stats": {
+      "hp": 18,
+      "speed": 6,
+      "damage": 5,
+      "armor": 0
+    },
+    "attack": {
+      "name": "Navajazo",
+      "damage": 5
+    }
   },
   {
     "id": "santi_con_novia",
     "name": "Santi con novia",
     "tier": 1,
-    "stats": { "hp": 18, "speed": 6, "damage": 5, "armor": 0 },
-    "attack": { "name": "Dios como la quiero", "damage": 5 }
+    "stats": {
+      "hp": 18,
+      "speed": 6,
+      "damage": 5,
+      "armor": 0
+    },
+    "attack": {
+      "name": "Dios como la quiero",
+      "damage": 5
+    }
   },
   {
     "id": "trundle_alejandro",
     "name": "Trundle de Alejandro",
     "tier": 1,
-    "stats": { "hp": 18, "speed": 6, "damage": 5, "armor": 0 },
-    "attack": { "name": "Dar vueltas por la jungla", "damage": 5 }
+    "stats": {
+      "hp": 18,
+      "speed": 6,
+      "damage": 5,
+      "armor": 0
+    },
+    "attack": {
+      "name": "Dar vueltas por la jungla",
+      "damage": 5
+    }
   },
   {
     "id": "paula_onlyfans",
     "name": "Paula (Onlyfans)",
     "tier": 1,
-    "stats": { "hp": 18, "speed": 6, "damage": 5, "armor": 0 },
-    "attack": { "name": "Vender fotos", "damage": 5 }
+    "stats": {
+      "hp": 18,
+      "speed": 6,
+      "damage": 5,
+      "armor": 0
+    },
+    "attack": {
+      "name": "Vender fotos",
+      "damage": 5
+    }
   },
   {
     "id": "agos",
     "name": "Agos",
     "tier": 1,
-    "stats": { "hp": 18, "speed": 6, "damage": 5, "armor": 0 },
-    "attack": { "name": "Arrastrarse", "damage": 5 }
+    "stats": {
+      "hp": 18,
+      "speed": 6,
+      "damage": 5,
+      "armor": 0
+    },
+    "attack": {
+      "name": "Arrastrarse",
+      "damage": 5
+    }
   },
   {
     "id": "belchu_12am",
     "name": "Belchu a las 12 AM",
     "tier": 2,
-    "stats": { "hp": 30, "speed": 8, "damage": 8, "armor": 2 },
-    "attack": { "name": "Emotea sin parar", "damage": 8 }
+    "stats": {
+      "hp": 30,
+      "speed": 8,
+      "damage": 8,
+      "armor": 2
+    },
+    "attack": {
+      "name": "Emotea sin parar",
+      "damage": 8
+    }
   },
   {
     "id": "santi_instagram",
     "name": "Santi instagram",
     "tier": 2,
-    "stats": { "hp": 30, "speed": 8, "damage": 8, "armor": 2 },
-    "attack": { "name": "Le gusta más un coño que un tonto un lápiz", "damage": 8 }
+    "stats": {
+      "hp": 30,
+      "speed": 8,
+      "damage": 8,
+      "armor": 2
+    },
+    "attack": {
+      "name": "Le gusta más un coño que un tonto un lápiz",
+      "damage": 8
+    }
   },
   {
     "id": "jasmine",
     "name": "Jasmine",
     "tier": 2,
-    "stats": { "hp": 30, "speed": 8, "damage": 8, "armor": 2 },
-    "attack": { "name": "Te denuncio", "damage": 8 }
+    "stats": {
+      "hp": 30,
+      "speed": 8,
+      "damage": 8,
+      "armor": 2
+    },
+    "attack": {
+      "name": "Te denuncio",
+      "damage": 8
+    }
   },
   {
     "id": "bea",
     "name": "Bea",
     "tier": 2,
-    "stats": { "hp": 30, "speed": 8, "damage": 8, "armor": 2 },
-    "attack": { "name": "Ya piensa en la jubilación", "damage": 8 }
+    "stats": {
+      "hp": 50,
+      "speed": 8,
+      "damage": 8,
+      "armor": 2
+    },
+    "attack": {
+      "name": "Ya piensa en la jubilación",
+      "damage": 8
+    }
   },
   {
     "id": "paula_hater",
     "name": "Paula (Hater)",
     "tier": 2,
-    "stats": { "hp": 30, "speed": 8, "damage": 8, "armor": 2 },
-    "attack": { "name": "Te odia", "damage": 8 }
+    "stats": {
+      "hp": 30,
+      "speed": 8,
+      "damage": 8,
+      "armor": 2
+    },
+    "attack": {
+      "name": "Te odia",
+      "damage": 8
+    }
   },
   {
     "id": "noelia",
     "name": "Noelia",
     "tier": 2,
-    "stats": { "hp": 30, "speed": 8, "damage": 8, "armor": 2 },
-    "attack": { "name": "¿Con quién hablas?", "damage": 8 }
+    "stats": {
+      "hp": 30,
+      "speed": 8,
+      "damage": 8,
+      "armor": 2
+    },
+    "attack": {
+      "name": "¿Con quién hablas?",
+      "damage": 8
+    }
   },
   {
     "id": "ana_ines",
     "name": "Ana Ines",
     "tier": 2,
-    "stats": { "hp": 30, "speed": 8, "damage": 8, "armor": 2 },
-    "attack": { "name": "Jordi", "damage": 8 }
+    "stats": {
+      "hp": 30,
+      "speed": 8,
+      "damage": 8,
+      "armor": 2
+    },
+    "attack": {
+      "name": "Jordi",
+      "damage": 8
+    }
   },
-
   {
     "id": "janire",
     "name": "Janire",
     "tier": 3,
-    "stats": { "hp": 45, "speed": 10, "damage": 12, "armor": 3 },
-    "attack": { "name": "Mentir en GTA", "damage": 12 }
+    "stats": {
+      "hp": 45,
+      "speed": 10,
+      "damage": 12,
+      "armor": 3
+    },
+    "attack": {
+      "name": "Mentir en GTA",
+      "damage": 12
+    }
   },
   {
     "id": "santi_fiesta",
     "name": "Santi de fiesta",
     "tier": 3,
-    "stats": { "hp": 45, "speed": 10, "damage": 12, "armor": 3 },
-    "attack": { "name": "Dios se mea", "damage": 12 }
+    "stats": {
+      "hp": 45,
+      "speed": 10,
+      "damage": 12,
+      "armor": 3
+    },
+    "attack": {
+      "name": "Dios se mea",
+      "damage": 12
+    }
   },
   {
     "id": "valentina",
     "name": "Valentina",
     "tier": 3,
-    "stats": { "hp": 45, "speed": 10, "damage": 12, "armor": 3 },
-    "attack": { "name": "SOPORTEEEE", "damage": 12 }
+    "stats": {
+      "hp": 45,
+      "speed": 10,
+      "damage": 12,
+      "armor": 3
+    },
+    "attack": {
+      "name": "SOPORTEEEE",
+      "damage": 12
+    }
   },
   {
     "id": "india",
     "name": "India",
     "tier": 3,
-    "stats": { "hp": 45, "speed": 10, "damage": 12, "armor": 3 },
-    "attack": { "name": "Casamiento prematuro", "damage": 12 }
+    "stats": {
+      "hp": 45,
+      "speed": 10,
+      "damage": 12,
+      "armor": 3
+    },
+    "attack": {
+      "name": "Casamiento prematuro",
+      "damage": 12
+    }
   },
   {
     "id": "mimi",
     "name": "Mimi",
     "tier": 3,
-    "stats": { "hp": 45, "speed": 10, "damage": 12, "armor": 3 },
-    "attack": { "name": "Adulterio múltiple", "damage": 12 }
+    "stats": {
+      "hp": 45,
+      "speed": 10,
+      "damage": 12,
+      "armor": 3
+    },
+    "attack": {
+      "name": "Adulterio múltiple",
+      "damage": 12
+    }
   },
   {
     "id": "marina",
     "name": "Marina",
     "tier": 3,
-    "stats": { "hp": 45, "speed": 10, "damage": 12, "armor": 3 },
-    "attack": { "name": "Apropiación indebida", "damage": 12 }
+    "stats": {
+      "hp": 45,
+      "speed": 10,
+      "damage": 12,
+      "armor": 3
+    },
+    "attack": {
+      "name": "Apropiación indebida",
+      "damage": 12
+    }
   },
-
   {
     "id": "jenny",
     "name": "Jenny",
     "tier": 4,
-    "stats": { "hp": 70, "speed": 14, "damage": 18, "armor": 5 },
-    "attack": { "name": "Toxicidad", "damage": 18 }
+    "stats": {
+      "hp": 70,
+      "speed": 14,
+      "damage": 18,
+      "armor": 5
+    },
+    "attack": {
+      "name": "Toxicidad",
+      "damage": 18
+    }
   },
   {
     "id": "santi_gitano",
     "name": "Santi Gitano",
     "tier": 4,
-    "stats": { "hp": 70, "speed": 14, "damage": 18, "armor": 5 },
-    "attack": { "name": "Puñalá que te quedas loco", "damage": 18 }
+    "stats": {
+      "hp": 70,
+      "speed": 14,
+      "damage": 18,
+      "armor": 5
+    },
+    "attack": {
+      "name": "Puñalá que te quedas loco",
+      "damage": 18
+    }
   },
   {
     "id": "belchu_cita",
     "name": "Belchu en una cita",
     "tier": 4,
-    "stats": { "hp": 70, "speed": 14, "damage": 18, "armor": 5 },
-    "attack": { "name": "Pagas tú, ya te haré bizum", "damage": 18 }
+    "stats": {
+      "hp": 70,
+      "speed": 14,
+      "damage": 18,
+      "armor": 5
+    },
+    "attack": {
+      "name": "Pagas tú, ya te haré bizum",
+      "damage": 18
+    }
   },
   {
     "id": "maia",
     "name": "Maia",
     "tier": 4,
-    "stats": { "hp": 70, "speed": 14, "damage": 1000000, "armor": 5 },
-    "attack": { "name": "Te hace ilusiones", "damage": 18 }
+    "stats": {
+      "hp": 70,
+      "speed": 14,
+      "damage": 1000000,
+      "armor": 5
+    },
+    "attack": {
+      "name": "Te hace ilusiones",
+      "damage": 18
+    }
   },
   {
-  "id": "estrella",
-  "name": "Estrella",
-  "tier": 1,
-  "stats": { "hp": 18, "speed": 6, "damage": 5, "armor": 0 },
-  "attack": { "name": "Santi ni mira", "damage": 5 }
-},
-{
-  "id": "teresa",
-  "name": "Teresa",
-  "tier": 1,
-  "stats": { "hp": 18, "speed": 6, "damage": 5, "armor": 0 },
-  "attack": { "name": "Santi te ilusiona", "damage": 5 }
-},
-{
-  "id": "paola",
-  "name": "Paola",
-  "tier": 1,
-  "stats": { "hp": 18, "speed": 6, "damage": 5, "armor": 0 },
-  "attack": { "name": "Santi ye empala", "damage": 5 }
-},
-{
-  "id": "laura",
-  "name": "Laura",
-  "tier": 1,
-  "stats": { "hp": 18, "speed": 6, "damage": 5, "armor": 0 },
-  "attack": { "name": "Santi te usa de ejemplo", "damage": 5 }
-}
-
-
+    "id": "estrella",
+    "name": "Estrella",
+    "tier": 1,
+    "stats": {
+      "hp": 18,
+      "speed": 6,
+      "damage": 5,
+      "armor": 0
+    },
+    "attack": {
+      "name": "Santi ni mira",
+      "damage": 5
+    }
+  },
+  {
+    "id": "teresa",
+    "name": "Teresa",
+    "tier": 1,
+    "stats": {
+      "hp": 18,
+      "speed": 6,
+      "damage": 5,
+      "armor": 0
+    },
+    "attack": {
+      "name": "Santi te ilusiona",
+      "damage": 5
+    }
+  },
+  {
+    "id": "paola",
+    "name": "Paola",
+    "tier": 1,
+    "stats": {
+      "hp": 18,
+      "speed": 6,
+      "damage": 5,
+      "armor": 0
+    },
+    "attack": {
+      "name": "Santi ye empala",
+      "damage": 5
+    }
+  },
+  {
+    "id": "laura",
+    "name": "Laura",
+    "tier": 1,
+    "stats": {
+      "hp": 18,
+      "speed": 6,
+      "damage": 5,
+      "armor": 0
+    },
+    "attack": {
+      "name": "Santi te usa de ejemplo",
+      "damage": 5
+    }
+  }
 ]

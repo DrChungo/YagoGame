@@ -6,7 +6,7 @@ namespace RoguelikeYago.Src.Config;
 // =======================================
 // FASE 4 – ENEMY GENERATION (tierWeights)
 // =======================================
-public sealed class EnemyGenerationConfig
+public class EnemyGenerationConfig
 {
     [JsonPropertyName("tierWeights")]
     public Dictionary<string, int> TierWeights { get; set; } = new();

@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 
 namespace RoguelikeYago.Src.Definitions;
 
-public sealed class StatsDef
+public class StatsDef
 {
     [JsonPropertyName("hp")]
     public int Hp { get; set; }
@@ -16,4 +16,3 @@ public sealed class StatsDef
     [JsonPropertyName("armor")]
     public int Armor { get; set; }
 }
-

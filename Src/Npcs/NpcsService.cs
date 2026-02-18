@@ -8,7 +8,7 @@ namespace RoguelikeYago.Src.Npcs;
 // ===================================
 // FASE 7 – NPCs (shop + post-boss)
 // ===================================
-public sealed class NpcService
+public class NpcService
 {
     public bool ShouldSpawnShop(Random rng)
     {
@@ -20,27 +20,26 @@ public sealed class NpcService
 
     public NpcDef PickShopNpc(IReadOnlyList<NpcDef> npcs, Random rng)
     {
-        return npcs
-            .Where(n => n.Type == "shop")
-            .OrderBy(_ => rng.Next())
-            .First();
+        return npcs.Where(n => n.Type == "shop").OrderBy(_ => rng.Next()).First();
     }
 
- public NpcDef PickPostBossNpc(IReadOnlyList<NpcDef> npcs)
-{
-    // ==========================
-    // FASE 7 – NPC POST-BOSS
-    // ==========================
-    var npc = npcs.FirstOrDefault(n =>
-        string.Equals(n.Type, "post_boss", StringComparison.OrdinalIgnoreCase));
+    public NpcDef PickPostBossNpc(IReadOnlyList<NpcDef> npcs)
+    {
+        // ==========================
+        // FASE 7 – NPC POST-BOSS
+        // ==========================
+        var npc = npcs.FirstOrDefault(n =>
+            string.Equals(n.Type, "post_boss", StringComparison.OrdinalIgnoreCase)
+        );
 
-    if (npc == null)
-        throw new InvalidOperationException(
-            $"Config inválido en {RoguelikeYago.Src.Config.PathConfig.NpcsFile} (campo: type). " +
-            "No existe ningún NPC con type='post_boss' en npcs.json.");
+        if (npc == null)
+            throw new InvalidOperationException(
+                $"Config inválido en {RoguelikeYago.Src.Config.PathConfig.NpcsFile} (campo: type). "
+                    + "No existe ningún NPC con type='post_boss' en npcs.json."
+            );
 
-    return npc;
-}
+        return npc;
+    }
 
     public void ShowNpc(NpcDef npc)
     {

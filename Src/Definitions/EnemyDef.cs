@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 
 namespace RoguelikeYago.Src.Definitions;
 
-public sealed class EnemyDef
+public class EnemyDef
 {
     [JsonPropertyName("id")]
     public string Id { get; set; } = "";

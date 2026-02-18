@@ -5,7 +5,7 @@ using RoguelikeYago.Src.Config;
 namespace RoguelikeYago.Src.Persistence;
 
 // NUEVO
-public sealed class SaveService
+public class SaveService
 {
     public SaveFile Load(int slot)
     {
@@ -13,7 +13,7 @@ public sealed class SaveService
         var json = File.ReadAllText(path);
 
         return JsonSerializer.Deserialize<SaveFile>(json, JsonOptions.Default)
-               ?? throw new InvalidDataException("Save corrupto");
+            ?? throw new InvalidDataException("Save corrupto");
     }
 
     public void Save(int slot, SaveFile save)
