@@ -212,6 +212,16 @@ UI por consola operativa
 
 ---
 
+# Futuras implementaciones
+
+Eleccion de claes para el jugador
+El jugador tendra 4 ataque distintos
+Guardado
+Utilizacion de seed
+Objetos consumibles 
+
+
+
 RoguelikeYago — Recupera la cama. Derrota a Lander.
 
 Creador Emilio Soto Alzamora
