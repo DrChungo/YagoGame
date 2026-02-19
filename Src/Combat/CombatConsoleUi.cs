@@ -5,9 +5,8 @@ using RoguelikeYago.Src.Definitions;
 
 namespace RoguelikeYago.Src.Combat;
 
-/// <summary>
 /// Utilidades de consola para mostrar combates (headers, barras de vida, estado).
-/// </summary>
+
 internal static class CombatConsoleUi
 {
     private const int PauseAfterEnemyAttackMs = 1000;
