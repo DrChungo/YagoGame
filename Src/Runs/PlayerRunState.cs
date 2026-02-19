@@ -17,17 +17,17 @@ namespace RoguelikeYago.Src.Runs
 
         public static PlayerRunState CreateDefault()
         {
-            int maxHp = 50;
+            int maxHp = 75;
 
             var stats = new StatsDef
             {
                 Hp = maxHp,
                 Speed = 5,
-                Damage = 10,
+                Damage = 0,
                 Armor = 3
             };
 
-            var attack = new AttackDef { Name = "Te tiltea", Damage = 5 };
+            var attack = new AttackDef { Name = "Te tiltea", Damage = 50 };
 
             return new PlayerRunState(maxHp, stats, attack);
         }

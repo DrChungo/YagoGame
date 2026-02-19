@@ -220,7 +220,7 @@
       "armor": 3
     },
     "attack": {
-      "name": "Dios se mea",
+      "name": "Dios me meo ",
       "damage": 12
     }
   },
@@ -235,7 +235,7 @@
       "armor": 3
     },
     "attack": {
-      "name": "SOPORTEEEE",
+      "name": "SOPORTÉÉÉÉ",
       "damage": 12
     }
   },
@@ -295,7 +295,7 @@
       "armor": 5
     },
     "attack": {
-      "name": "Toxicidad",
+      "name": "Puñetazo al armario",
       "damage": 18
     }
   },
@@ -334,7 +334,7 @@
     "name": "Maia",
     "tier": 4,
     "stats": {
-      "hp": 70,
+      "hp": 700,
       "speed": 14,
       "damage": 1000000,
       "armor": 5
@@ -385,7 +385,7 @@
       "armor": 0
     },
     "attack": {
-      "name": "Santi ye empala",
+      "name": "Santi se empalma",
       "damage": 5
     }
   },

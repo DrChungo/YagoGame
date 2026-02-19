@@ -1,13 +1,41 @@
 {
   "version": 2,
-  "dgSpecHash": "Cq/GwbwZYuQ=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Emiliano\\Desktop\\vsCode\\DWES\\YagoGame\\YagoGame.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Emiliano\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.9\\microsoft.net.illink.tasks.9.0.9.nupkg.sha512",
-    "C:\\Users\\Emiliano\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\9.0.9\\microsoft.netcore.app.runtime.win-x64.9.0.9.nupkg.sha512",
-    "C:\\Users\\Emiliano\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\9.0.9\\microsoft.windowsdesktop.app.runtime.win-x64.9.0.9.nupkg.sha512",
-    "C:\\Users\\Emiliano\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.9\\microsoft.aspnetcore.app.runtime.win-x64.9.0.9.nupkg.sha512"
-  ],
-  "logs": []
+  "dgSpecHash": "yDnVwMFxLfM=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Usuario\\Desktop\\clase\\2 DAW\\YagoGame\\YagoGame.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "No se pudo recuperar información sobre \"Microsoft.WindowsDesktop.App.Ref\" del origen remoto \"https://api.nuget.org/v3-flatcontainer/microsoft.windowsdesktop.app.ref/index.json\".\r\n  The proxy tunnel request to proxy 'http://127.0.0.1:55305/' failed with status code '403'.\"",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\clase\\2 DAW\\YagoGame\\YagoGame.csproj",
+      "filePath": "C:\\Users\\Usuario\\Desktop\\clase\\2 DAW\\YagoGame\\YagoGame.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "No se pudo recuperar información sobre \"Microsoft.NETCore.App.Ref\" del origen remoto \"https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.ref/index.json\".\r\n  The proxy tunnel request to proxy 'http://127.0.0.1:55305/' failed with status code '403'.\"",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\clase\\2 DAW\\YagoGame\\YagoGame.csproj",
+      "filePath": "C:\\Users\\Usuario\\Desktop\\clase\\2 DAW\\YagoGame\\YagoGame.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "No se pudo recuperar información sobre \"Microsoft.NETCore.App.Host.win-x64\" del origen remoto \"https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.host.win-x64/index.json\".\r\n  The proxy tunnel request to proxy 'http://127.0.0.1:55305/' failed with status code '403'.\"",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\clase\\2 DAW\\YagoGame\\YagoGame.csproj",
+      "filePath": "C:\\Users\\Usuario\\Desktop\\clase\\2 DAW\\YagoGame\\YagoGame.csproj",
+      "targetGraphs": []
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "No se pudo recuperar información sobre \"Microsoft.AspNetCore.App.Ref\" del origen remoto \"https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.app.ref/index.json\".\r\n  The proxy tunnel request to proxy 'http://127.0.0.1:55305/' failed with status code '403'.\"",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\clase\\2 DAW\\YagoGame\\YagoGame.csproj",
+      "filePath": "C:\\Users\\Usuario\\Desktop\\clase\\2 DAW\\YagoGame\\YagoGame.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
