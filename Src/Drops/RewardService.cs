@@ -67,6 +67,7 @@ public class RewardService
 
         return results;
     }
+
 //funcion que pide al jugador que elija una recompensa.
     public ItemDef AskPlayerToChoose(
         List<ItemDef> rewards,

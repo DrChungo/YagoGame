@@ -5,7 +5,7 @@ namespace RoguelikeYago.Src.Runs
     public static class PlayerSetup
     {
         public sealed record PlayerBundle(int MaxHp, StatsDef Stats, AttackDef Attack);
-//Funcion que crea el jugador por defecto.
+        //Funcion que crea el jugador por defecto.
         public static PlayerBundle CreateDefault()
         {
             int playerMaxHp = 50;

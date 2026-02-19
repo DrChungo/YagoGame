@@ -8,7 +8,7 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\AppData\\Local\\Temp\\cursor-sandbox-cache\\eefb0a9f5b41c7ab94f6c3f30599dd13\\nuget": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -16,7 +16,7 @@
       "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\clase\\2 DAW\\YagoGame\\YagoGame.csproj",
       "projectName": "YagoGame",
       "projectPath": "C:\\Users\\Usuario\\Desktop\\clase\\2 DAW\\YagoGame\\YagoGame.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\AppData\\Local\\Temp\\cursor-sandbox-cache\\eefb0a9f5b41c7ab94f6c3f30599dd13\\nuget",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Usuario\\Desktop\\clase\\2 DAW\\YagoGame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
@@ -86,27 +86,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "No se pudo recuperar información sobre \"Microsoft.WindowsDesktop.App.Ref\" del origen remoto \"https://api.nuget.org/v3-flatcontainer/microsoft.windowsdesktop.app.ref/index.json\".\r\n  The proxy tunnel request to proxy 'http://127.0.0.1:55305/' failed with status code '403'.\""
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "No se pudo recuperar información sobre \"Microsoft.NETCore.App.Ref\" del origen remoto \"https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.ref/index.json\".\r\n  The proxy tunnel request to proxy 'http://127.0.0.1:55305/' failed with status code '403'.\""
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "No se pudo recuperar información sobre \"Microsoft.NETCore.App.Host.win-x64\" del origen remoto \"https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.host.win-x64/index.json\".\r\n  The proxy tunnel request to proxy 'http://127.0.0.1:55305/' failed with status code '403'.\""
-    },
-    {
-      "code": "NU1301",
-      "level": "Error",
-      "message": "No se pudo recuperar información sobre \"Microsoft.AspNetCore.App.Ref\" del origen remoto \"https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.app.ref/index.json\".\r\n  The proxy tunnel request to proxy 'http://127.0.0.1:55305/' failed with status code '403'.\""
-    }
-  ]
+  }
 }

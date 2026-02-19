@@ -7,15 +7,13 @@ namespace RoguelikeYago.Src.Combat;
 /// </summary>
 public static class CombatDamage
 {
-    // BALANCEO ARMADURA:
- //Este es el porcentaje del maximo que puede reducir el daño
- //Como maximo te harian uin 20% de daño
-    private const int PorcentajeMinimo = 20;
+    // BALANCEO ARMADURA: mínimo porcentaje de daño original que siempre se recibe (20 = mínimo 20%).
+    private const int MinPercentage = 20;
 
-    public static int CalcularDañoEfectivo(int dañoBruto, int armaduraDefensor)
+    public static int CalculateEffectiveDamage(int rawDamage, int defenderArmor)
     {
-        int dañoReducido = dañoBruto - armaduraDefensor;
-        int dañoMinimoPorcentaje = Math.Max(1, dañoBruto * PorcentajeMinimo / 100);
-        return Math.Max(dañoMinimoPorcentaje, dañoReducido);
+        int reducedDamage = rawDamage - defenderArmor;
+        int minDamageByPercentage = Math.Max(1, rawDamage * MinPercentage / 100);
+        return Math.Max(minDamageByPercentage, reducedDamage);
     }
 }

@@ -26,8 +26,8 @@ public sealed class CombatService
         {
             if (playerTurn)
             {
-                int dañoBruto = playerAttack.Damage + playerStats.Damage;
-                int totalDamage = CombatDamage.CalcularDañoEfectivo(dañoBruto, enemyStats.Armor);
+                int rawDamage = playerAttack.Damage + playerStats.Damage;
+                int totalDamage = CombatDamage.CalculateEffectiveDamage(rawDamage, enemyStats.Armor);
                 enemyStats.Hp -= totalDamage;
                 if (enemyStats.Hp < 0)
                     enemyStats.Hp = 0;
@@ -41,8 +41,8 @@ public sealed class CombatService
             else
             {
                 var enemyAttack = enemyAttacks[rng.Next(enemyAttacks.Count)];
-                int dañoBruto = enemyAttack.Damage + enemyStats.Damage;
-                int totalDamage = CombatDamage.CalcularDañoEfectivo(dañoBruto, playerStats.Armor);
+                int rawDamage = enemyAttack.Damage + enemyStats.Damage;
+                int totalDamage = CombatDamage.CalculateEffectiveDamage(rawDamage, playerStats.Armor);
                 playerStats.Hp -= totalDamage;
                 if (playerStats.Hp < 0)
                     playerStats.Hp = 0;
@@ -133,9 +133,9 @@ public sealed class CombatService
                     CombatConsoleUi.WaitForKey();
                 else
                 {
-                    bool siguienteEsJugador = i + 1 < turnOrder.Count && turnOrder[i + 1].IsPlayer;
-                    bool esUltimoDelTurno = i + 1 >= turnOrder.Count;
-                    if (siguienteEsJugador || esUltimoDelTurno)
+                    bool nextIsPlayer = i + 1 < turnOrder.Count && turnOrder[i + 1].IsPlayer;
+                    bool isLastInTurn = i + 1 >= turnOrder.Count;
+                    if (nextIsPlayer || isLastInTurn)
                         CombatConsoleUi.WaitForKey();
                     else
                         CombatConsoleUi.PauseAfterEnemyAttack();
@@ -205,8 +205,8 @@ public sealed class CombatService
                 continue;
             }
 
-            int dañoBruto = playerAttack.Damage + playerStats.Damage;
-            int totalDamage = CombatDamage.CalcularDañoEfectivo(dañoBruto, target.Stats.Armor);
+            int rawDamage = playerAttack.Damage + playerStats.Damage;
+            int totalDamage = CombatDamage.CalculateEffectiveDamage(rawDamage, target.Stats.Armor);
             target.Stats.Hp -= totalDamage;
             if (target.Stats.Hp < 0)
                 target.Stats.Hp = 0;
@@ -234,8 +234,8 @@ public sealed class CombatService
         if (enemy.Stats.Hp <= 0)
             return;
 
-        int dañoBruto = enemy.Attack.Damage + enemy.Stats.Damage;
-        int totalDamage = CombatDamage.CalcularDañoEfectivo(dañoBruto, playerStats.Armor);
+        int rawDamage = enemy.Attack.Damage + enemy.Stats.Damage;
+        int totalDamage = CombatDamage.CalculateEffectiveDamage(rawDamage, playerStats.Armor);
         playerStats.Hp -= totalDamage;
         if (playerStats.Hp < 0)
             playerStats.Hp = 0;

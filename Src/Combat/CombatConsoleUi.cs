@@ -10,7 +10,7 @@ namespace RoguelikeYago.Src.Combat;
 /// </summary>
 internal static class CombatConsoleUi
 {
-    private const int PausaTrasAtaqueEnemigoMs = 1000;
+    private const int PauseAfterEnemyAttackMs = 1000;
 
     public static void PrintHeader(string title)
     {
@@ -54,5 +54,5 @@ internal static class CombatConsoleUi
         Console.ReadKey(true);
     }
 
-    public static void PauseAfterEnemyAttack() => Thread.Sleep(PausaTrasAtaqueEnemigoMs);
+    public static void PauseAfterEnemyAttack() => Thread.Sleep(PauseAfterEnemyAttackMs);
 }
