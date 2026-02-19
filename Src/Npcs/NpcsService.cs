@@ -19,20 +19,19 @@ public class NpcService
         return npcs.Where(n => n.Type == "shop").OrderBy(_ => rng.Next()).First();
     }
 
-    public NpcDef PickPostBossNpc(IReadOnlyList<NpcDef> npcs)
+    public NpcDef PickPostBossNpc(IReadOnlyList<NpcDef> npcs, Random rng)
     {
-      
-        var npc = npcs.FirstOrDefault(n =>
-            string.Equals(n.Type, "post_boss", StringComparison.OrdinalIgnoreCase)
-        );
+        var pool = npcs
+            .Where(n => string.Equals(n.Type, "post_boss", StringComparison.OrdinalIgnoreCase))
+            .ToList();
 
-        if (npc == null)
+        if (pool.Count == 0)
             throw new InvalidOperationException(
                 $"Config inválido en {RoguelikeYago.Src.Config.PathConfig.NpcsFile} (campo: type). "
                     + "No existe ningún NPC con type='post_boss' en npcs.json."
             );
 
-        return npc;
+        return pool.OrderBy(_ => rng.Next()).First();
     }
 
     public void ShowNpc(NpcDef npc)

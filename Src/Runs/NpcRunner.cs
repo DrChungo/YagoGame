@@ -17,7 +17,7 @@ namespace RoguelikeYago.Src.Runs
 
         public void ShowPostBossNpc()
         {
-            var npc = _ctx.Npcs.PickPostBossNpc(_ctx.Content.Npcs);
+            var npc = _ctx.Npcs.PickPostBossNpc(_ctx.Content.Npcs, _ctx.Rng);
             _ctx.Npcs.ShowNpc(npc);
         }
     }
