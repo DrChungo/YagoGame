@@ -24,7 +24,7 @@
   },
 
   "rng": {
-    "useSeed": true,
+    "useSeed": false,
     "defaultSeed": 12345
   },
 
