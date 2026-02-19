@@ -1,0 +1,2 @@
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\bin\Release\net9.0\win-x64\publish\YagoGame.pdb
+C:\Users\Usuario\Desktop\clase\2 DAW\YagoGame\bin\Release\net9.0\win-x64\publish\YagoGame.exe
