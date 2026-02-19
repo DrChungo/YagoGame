@@ -33,7 +33,10 @@ namespace RoguelikeYago.Src.Runs
             var config = loader.LoadObject<GameConfig>(PathConfig.ConfigFile);
 
             var content = new ContentService();
-            var rng = new Random(config.Rng.DefaultSeed);
+            var seed = config.Rng.UseSeed
+                ? config.Rng.DefaultSeed
+                : Guid.NewGuid().GetHashCode();
+            var rng = new Random(seed);
 
             return new RunContext(
                 config,
