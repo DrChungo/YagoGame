@@ -29,10 +29,10 @@ public static class RunHelpers
             .ToList();
     }
 
-    public static List<CombatService.EnemyInstance> ToInstances(List<EnemyDef> enemies)
+    public static List<EnemyInstance> ToInstances(List<EnemyDef> enemies)
     {
         return enemies
-            .Select(e => new CombatService.EnemyInstance(e.Name, Clone(e.Stats), e.Attack))
+            .Select(e => new EnemyInstance(e.Name, Clone(e.Stats), e.Attack))
             .ToList();
     }
 

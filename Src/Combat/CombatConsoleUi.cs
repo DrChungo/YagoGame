@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
+using RoguelikeYago.Src.Definitions;
 
 namespace RoguelikeYago.Src.Combat;
 
@@ -8,6 +10,8 @@ namespace RoguelikeYago.Src.Combat;
 /// </summary>
 internal static class CombatConsoleUi
 {
+    private const int PausaTrasAtaqueEnemigoMs = 1000;
+
     public static void PrintHeader(string title)
     {
         Console.WriteLine("\n" + new string('═', 50));
@@ -49,4 +53,6 @@ internal static class CombatConsoleUi
         Console.ResetColor();
         Console.ReadKey(true);
     }
+
+    public static void PauseAfterEnemyAttack() => Thread.Sleep(PausaTrasAtaqueEnemigoMs);
 }

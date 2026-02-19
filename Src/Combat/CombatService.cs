@@ -6,19 +6,19 @@ using RoguelikeYago.Src.UI;
 
 namespace RoguelikeYago.Src.Combat;
 
-
-public class CombatService
+public sealed class CombatService
 {
-  
     public void Combat(
         StatsDef playerStats,
         StatsDef enemyStats,
         AttackDef playerAttack,
-        AttackDef enemyAttack
+        IReadOnlyList<AttackDef> enemyAttacks,
+        Random rng,
+        string enemyName = "Enemigo"
     )
     {
         Console.Clear();
-        PrintHeader("⚔️ COMBATE ⚔️");
+        CombatConsoleUi.PrintHeader("⚔️ COMBATE ⚔️");
 
         bool playerTurn = playerStats.Speed >= enemyStats.Speed;
 
@@ -26,7 +26,8 @@ public class CombatService
         {
             if (playerTurn)
             {
-                int totalDamage = playerAttack.Damage + playerStats.Damage;
+                int dañoBruto = playerAttack.Damage + playerStats.Damage;
+                int totalDamage = CombatDamage.CalcularDañoEfectivo(dañoBruto, enemyStats.Armor);
                 enemyStats.Hp -= totalDamage;
                 if (enemyStats.Hp < 0)
                     enemyStats.Hp = 0;
@@ -39,27 +40,29 @@ public class CombatService
             }
             else
             {
-                playerStats.Hp -= enemyAttack.Damage;
+                var enemyAttack = enemyAttacks[rng.Next(enemyAttacks.Count)];
+                int dañoBruto = enemyAttack.Damage + enemyStats.Damage;
+                int totalDamage = CombatDamage.CalcularDañoEfectivo(dañoBruto, playerStats.Armor);
+                playerStats.Hp -= totalDamage;
                 if (playerStats.Hp < 0)
                     playerStats.Hp = 0;
 
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(
-                    $"\n🔴 El enemigo usa {enemyAttack.Name} y hace {enemyAttack.Damage} de daño."
+                    $"\n🔴 {enemyName} usa {enemyAttack.Name} y hace {totalDamage} de daño."
                 );
                 Console.ResetColor();
             }
 
             Console.WriteLine();
-            PrintHealthBar("👤 Yago HP", playerStats.Hp);
-            PrintHealthBar("👹 Enemigo HP", enemyStats.Hp);
+            CombatConsoleUi.PrintHealthBar("👤 Yago HP", playerStats.Hp);
+            CombatConsoleUi.PrintHealthBar($"👹 {enemyName} HP", enemyStats.Hp);
 
             Console.WriteLine("\n" + new string('─', 50));
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine("Pulsa una tecla para continuar...");
-            Console.ResetColor();
-            Console.ReadKey(true);
-
+            if (playerTurn)
+                CombatConsoleUi.WaitForKey();
+            else
+                CombatConsoleUi.PauseAfterEnemyAttack();
             playerTurn = !playerTurn;
         }
 
@@ -67,20 +70,17 @@ public class CombatService
         if (playerStats.Hp > 0)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            PrintHeader("🎉 ¡VICTORIA! 🎉");
+            CombatConsoleUi.PrintHeader("🎉 ¡VICTORIA! 🎉");
             Console.ResetColor();
         }
         else
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            PrintHeader("💀 DERROTA 💀");
+            CombatConsoleUi.PrintHeader("💀 DERROTA 💀");
             Console.ResetColor();
         }
 
-        Console.ForegroundColor = ConsoleColor.DarkGray;
-        Console.WriteLine("Pulsa una tecla para volver...");
-        Console.ResetColor();
-        Console.ReadKey(true);
+        CombatConsoleUi.WaitForKey("Pulsa una tecla para volver...");
     }
     public void StartThreeEnemiesRoom(
         StatsDef playerStats,
@@ -89,19 +89,15 @@ public class CombatService
     )
     {
         Console.Clear();
-        PrintHeader("⚔️ SALA DE BATALLA ⚔️");
+        CombatConsoleUi.PrintHeader("⚔️ SALA DE BATALLA ⚔️");
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("¡Sala iniciada! Hay 3 enemigos.");
         Console.ResetColor();
-        PrintStatus(playerStats, enemies);
-        Console.ForegroundColor = ConsoleColor.DarkGray;
-        Console.WriteLine("Pulsa una tecla para empezar...");
-        Console.ResetColor();
-        Console.ReadKey(true);
+        CombatConsoleUi.PrintStatus(playerStats, enemies);
+        CombatConsoleUi.WaitForKey("Pulsa una tecla para empezar...");
 
         while (playerStats.Hp > 0 && enemies.Any(e => e.Stats.Hp > 0))
         {
-            // Orden fijo por Speed (más speed = antes). En empates: jugador primero.
             var turnOrder = enemies
                 .Where(e => e.Stats.Hp > 0)
                 .Select(e => new TurnActor(
@@ -119,11 +115,12 @@ public class CombatService
                     )
                 )
                 .OrderByDescending(a => a.Speed)
-                .ThenByDescending(a => a.IsPlayer) // jugador gana empates
+                .ThenByDescending(a => a.IsPlayer)
                 .ToList();
 
-            foreach (var actor in turnOrder)
+            for (int i = 0; i < turnOrder.Count; i++)
             {
+                var actor = turnOrder[i];
                 if (playerStats.Hp <= 0)
                     break;
                 if (!enemies.Any(e => e.Stats.Hp > 0))
@@ -131,12 +128,18 @@ public class CombatService
 
                 actor.Act();
 
-                // PrintStatus(playerStats, enemies); // Eliminado para reducir spam
                 Console.WriteLine(new string('─', 50));
-                Console.ForegroundColor = ConsoleColor.DarkGray;
-                Console.WriteLine("Pulsa una tecla para continuar...");
-                Console.ResetColor();
-                Console.ReadKey(true);
+                if (actor.IsPlayer)
+                    CombatConsoleUi.WaitForKey();
+                else
+                {
+                    bool siguienteEsJugador = i + 1 < turnOrder.Count && turnOrder[i + 1].IsPlayer;
+                    bool esUltimoDelTurno = i + 1 >= turnOrder.Count;
+                    if (siguienteEsJugador || esUltimoDelTurno)
+                        CombatConsoleUi.WaitForKey();
+                    else
+                        CombatConsoleUi.PauseAfterEnemyAttack();
+                }
             }
         }
 
@@ -144,20 +147,17 @@ public class CombatService
         if (playerStats.Hp > 0)
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            PrintHeader("🏆 ¡SALA LIMPIADA! 🏆");
+            CombatConsoleUi.PrintHeader("🏆 ¡SALA LIMPIADA! 🏆");
             Console.ResetColor();
         }
         else
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            PrintHeader("💀 DERROTA 💀");
+            CombatConsoleUi.PrintHeader("💀 DERROTA 💀");
             Console.ResetColor();
         }
 
-        Console.ForegroundColor = ConsoleColor.DarkGray;
-        Console.WriteLine("Pulsa una tecla para volver...");
-        Console.ResetColor();
-        Console.ReadKey(true);
+        CombatConsoleUi.WaitForKey("Pulsa una tecla para volver...");
     }
 
  
@@ -201,15 +201,12 @@ public class CombatService
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"❌ ¡{target.Name} ya está derrotado! Elige otro.");
                 Console.ResetColor();
-                Console.ForegroundColor = ConsoleColor.DarkGray;
-                Console.WriteLine("Pulsa una tecla para continuar...");
-                Console.ResetColor();
-                Console.ReadKey(true);
+                CombatConsoleUi.WaitForKey();
                 continue;
             }
 
-            // Aplicar daño
-            int totalDamage = playerAttack.Damage + playerStats.Damage;
+            int dañoBruto = playerAttack.Damage + playerStats.Damage;
+            int totalDamage = CombatDamage.CalcularDañoEfectivo(dañoBruto, target.Stats.Armor);
             target.Stats.Hp -= totalDamage;
             if (target.Stats.Hp < 0)
                 target.Stats.Hp = 0;
@@ -237,69 +234,16 @@ public class CombatService
         if (enemy.Stats.Hp <= 0)
             return;
 
-        playerStats.Hp -= enemy.Attack.Damage;
+        int dañoBruto = enemy.Attack.Damage + enemy.Stats.Damage;
+        int totalDamage = CombatDamage.CalcularDañoEfectivo(dañoBruto, playerStats.Armor);
+        playerStats.Hp -= totalDamage;
         if (playerStats.Hp < 0)
             playerStats.Hp = 0;
 
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine(
-            $"\n🔴 {enemy.Name} usa {enemy.Attack.Name} y hace {enemy.Attack.Damage} de daño. (Tu vida: {playerStats.Hp})"
+            $"\n🔴 {enemy.Name} usa {enemy.Attack.Name} y hace {totalDamage} de daño. (Tu vida: {playerStats.Hp})"
         );
         Console.ResetColor();
     }
-
-    private static void PrintStatus(StatsDef playerStats, List<EnemyInstance> enemies)
-    {
-        Console.WriteLine("\n" + new string('═', 50));
-        Console.ForegroundColor = ConsoleColor.Cyan;
-        Console.WriteLine($"👤 Jugador HP: {playerStats.Hp}");
-        Console.ResetColor();
-
-        for (int i = 0; i < enemies.Count; i++)
-        {
-            var e = enemies[i];
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"👹 {i + 1}. {e.Name} HP: {e.Stats.Hp}");
-            Console.ResetColor();
-        }
-        Console.WriteLine(new string('═', 50) + "\n");
-    }
-
-
-    // UTILIDADES VISUALES
-   
-    private static void PrintHeader(string title)
-    {
-        Console.WriteLine("\n" + new string('═', 50));
-        Console.WriteLine($"  {title}");
-        Console.WriteLine(new string('═', 50) + "\n");
-    }
-
-    private static void PrintHealthBar(string label, int hp)
-    {
-        Console.ForegroundColor =
-            hp > 50 ? ConsoleColor.Green
-            : hp > 20 ? ConsoleColor.Yellow
-            : ConsoleColor.Red;
-        Console.WriteLine($"{label}: {hp}");
-        Console.ResetColor();
-    }
-
-    //MODELOS INTERNOS
-
-    public  class EnemyInstance
-    {
-        public string Name { get; }
-        public StatsDef Stats { get; }
-        public AttackDef Attack { get; }
-
-        public EnemyInstance(string name, StatsDef stats, AttackDef attack)
-        {
-            Name = name;
-            Stats = stats;
-            Attack = attack;
-        }
-    }
-
-    private  record TurnActor(string Name, int Speed, bool IsPlayer, Action Act);
 }
