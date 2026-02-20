@@ -16,6 +16,7 @@ namespace RoguelikeYago.Src.Runs
         public RewardService Rewards { get; }
         public NpcService Npcs { get; }
 
+        //RunContext es el constructor de la clase RunContext
         private RunContext(GameConfig config, ContentService content, Random rng,
             CombatService combat, RewardService rewards, NpcService npcs)
         {
@@ -27,12 +28,15 @@ namespace RoguelikeYago.Src.Runs
             Npcs = npcs;
         }
 
+        //Create es el método que se encarga de crear el contexto del juego
         public static RunContext Create()
         {
             var loader = new JsonFileLoader();
+            //config es la configuración del juego
             var config = loader.LoadObject<GameConfig>(PathConfig.ConfigFile);
 
             var content = new ContentService();
+            //seed es la semilla del generador de números aleatorios
             var seed = config.Rng.UseSeed
                 ? config.Rng.DefaultSeed
                 : Guid.NewGuid().GetHashCode();

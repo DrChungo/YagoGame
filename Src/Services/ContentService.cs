@@ -4,7 +4,7 @@ using RoguelikeYago.Src.Definitions;
 
 namespace RoguelikeYago.Src.Services;
 
-//Fase 0
+//ContentService es la clase que se encarga de cargar el contenido del juego
 public class ContentService
 {
     private readonly JsonFileLoader _loader = new();

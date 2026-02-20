@@ -5,7 +5,8 @@ namespace RoguelikeYago;
 
 internal static class Program
 {
-    //FASE 0
+
+    //Main es el método principal que se encarga de ejecutar el programa
     private static void Main()
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;

@@ -3,12 +3,16 @@ using System.Linq;
 
 namespace RoguelikeYago.Src.Runs
 {
+    //Run es la clase que se encarga de la ejecución del juego
     public class Run
     {
+      //Play es el método que se encarga de ejecutar el juego
       public void Play()
 {
     var ctx = RunContext.Create();
+    //CreateDefault es el método que se encarga de crear el estado del jugador por defecto
     var player = PlayerRunState.CreateDefault();
+    //inventory es el conjunto de items que el jugador tiene
     var inventory = new HashSet<string>();
 
     var roomRunner = new RoomRunner(ctx);
@@ -18,6 +22,7 @@ namespace RoguelikeYago.Src.Runs
 
     var bosses = ctx.Content.Bosses.OrderBy(b => b.Order).ToList();
 
+    //bosses es la lista de bosses que se van a enfrentar
     foreach (var boss in bosses)
     {
         for (int room = 1; room <= 3; room++)
@@ -35,12 +40,13 @@ namespace RoguelikeYago.Src.Runs
         if (!bossRunner.FightBoss(player, boss))
         {
             RunUi.ShowGameOver();
-            return; // ✅ vuelve al menú
+            return; 
         }
 
         npcRunner.ShowPostBossNpc();
     }
 
+    //ShowEndScreen es el método que se encarga de mostrar la pantalla de fin de juego
     RunUi.ShowEndScreen();
 }
 

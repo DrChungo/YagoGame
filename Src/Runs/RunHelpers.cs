@@ -6,9 +6,9 @@ using RoguelikeYago.Src.Definitions;
 
 namespace RoguelikeYago.Src.Runs;
 
-// ===================================
-// FASE 7 – Helpers compartidos
-// ===================================
+
+//  Helpers compartidos
+
 public static class RunHelpers
 {
     public static List<EnemyDef> GenerateRoom(

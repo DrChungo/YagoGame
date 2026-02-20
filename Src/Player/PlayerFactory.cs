@@ -6,16 +6,19 @@ using RoguelikeYago.Src.Persistence;
 using RoguelikeYago.Src.Services;
 
 namespace RoguelikeYago.Src.Player;
-
+    
+    //PlayerFactory es la clase que se encarga de crear el jugador desde classes.json + save
 public class PlayerFactory
 {
     private readonly ContentService _content;
-
+    //PlayerFactory es el constructor de la clase PlayerFactory
     public PlayerFactory(ContentService content)
     {
         _content = content;
     }
 
+    //CreateFromClass es el método que se encarga de crear el jugador desde classes.json
+    //Todavia no tenemos save
     public PlayerState CreateFromClass(string classId)
     {
         var classDef = _content.Classes.First(c => c.Id == classId);
@@ -37,7 +40,7 @@ public class PlayerFactory
 
         return new PlayerState(save.Player.ClassId, CopyStats(save.Player.Stats), skills);
     }
-
+//CopyStats es el método que se encarga de copiar las stats del jugador
     private static StatsDef CopyStats(StatsDef s) =>
         new()
         {

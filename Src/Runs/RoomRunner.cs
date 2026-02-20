@@ -3,7 +3,9 @@ using RoguelikeYago.Src.Services;
 
 namespace RoguelikeYago.Src.Runs
 {
-    public sealed class RoomRunner
+
+    //RoomRunner es la clase que se encarga de la ejecución de la sala
+   public sealed class RoomRunner
     {
         private readonly RunContext _ctx;
 

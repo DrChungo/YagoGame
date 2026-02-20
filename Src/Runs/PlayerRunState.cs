@@ -15,6 +15,7 @@ namespace RoguelikeYago.Src.Runs
             Attack = attack;
         }
 
+        //CreateDefault es el método que se encarga de crear el estado del jugador por defecto
         public static PlayerRunState CreateDefault()
         {
             int maxHp = 75;
@@ -32,6 +33,7 @@ namespace RoguelikeYago.Src.Runs
             return new PlayerRunState(maxHp, stats, attack);
         }
 
+        //HealToFull es el método que se encarga de curar al jugador a su vida máxima
         public void HealToFull() => Stats.Hp = MaxHp;
 
         public void IncreaseMaxHp(int delta)
@@ -40,6 +42,7 @@ namespace RoguelikeYago.Src.Runs
             Stats.Hp = MaxHp;
         }
 
+        //AddStats es el método que se encarga de sumar las stats del jugador
         public void AddStats(StatsDef delta)
         {
             Stats.Armor += delta.Armor;

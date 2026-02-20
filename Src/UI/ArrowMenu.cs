@@ -3,11 +3,12 @@ using System.Collections.Generic;
 
 namespace RoguelikeYago.Src.UI;
 
-// ===================================
-// FASE 9 – UI con flechas + Enter
-// ===================================
+
+//  UI con flechas + Enter
+
 public static class ArrowMenu
 {
+    //Choose es el método que se encarga de mostrar el menú con flechas y Enter
     public static int Choose(string title, IReadOnlyList<string> options)
     {
         if (options.Count == 0) throw new ArgumentException("No hay opciones para mostrar.", nameof(options));
@@ -17,6 +18,7 @@ public static class ArrowMenu
         while (true)
         {
             Console.Clear();
+        
             if (!string.IsNullOrWhiteSpace(title))
             {
                 Console.WriteLine(title);
@@ -45,7 +47,7 @@ public static class ArrowMenu
                     return index;
 
                 case ConsoleKey.Escape:
-                    return -1; // opcional: cancelar
+                    return -1; 
             }
         }
     }

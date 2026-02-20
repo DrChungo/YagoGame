@@ -11,6 +11,7 @@ internal static class CombatConsoleUi
 {
     private const int PauseAfterEnemyAttackMs = 1000;
 
+    //PrintHeader es el método que se encarga de imprimir el título de la pantalla
     public static void PrintHeader(string title)
     {
         Console.WriteLine("\n" + new string('═', 50));
@@ -18,6 +19,7 @@ internal static class CombatConsoleUi
         Console.WriteLine(new string('═', 50) + "\n");
     }
 
+    //PrintHealthBar es el método que se encarga de imprimir la barra de vida del jugador y los enemigos
     public static void PrintHealthBar(string label, int hp)
     {
         Console.ForegroundColor =
@@ -28,6 +30,7 @@ internal static class CombatConsoleUi
         Console.ResetColor();
     }
 
+    //PrintStatus es el método que se encarga de imprimir el estado del jugador y los enemigos
     public static void PrintStatus(StatsDef playerStats, IReadOnlyList<EnemyInstance> enemies)
     {
         Console.WriteLine("\n" + new string('═', 50));
@@ -45,6 +48,7 @@ internal static class CombatConsoleUi
         Console.WriteLine(new string('═', 50) + "\n");
     }
 
+    //WaitForKey es el método que se encarga de esperar a que el usuario pulse una tecla para continuar
     public static void WaitForKey(string message = "Pulsa una tecla para continuar...")
     {
         Console.ForegroundColor = ConsoleColor.DarkGray;

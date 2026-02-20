@@ -229,6 +229,7 @@ public sealed class CombatService
         }
     }
 
+    //EnemyAct es el método que se encarga de que el enemigo actúe
     private static void EnemyAct(StatsDef playerStats, EnemyInstance enemy)
     {
         if (enemy.Stats.Hp <= 0)

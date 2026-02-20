@@ -10,6 +10,7 @@ namespace RoguelikeYago.Src.Runs
 
         public RewardApplier(RunContext ctx) => _ctx = ctx;
 
+        //GiveRoomReward es el método que se encarga de dar la recompensa de la sala
         public void GiveRoomReward(PlayerRunState player, HashSet<string> inventory)
         {
             var options = _ctx.Rewards.GenerateRoomRewards(
@@ -29,6 +30,7 @@ namespace RoguelikeYago.Src.Runs
             Console.ReadKey(true);
         }
 
+        //PrintReward es el método que se encarga de imprimir la recompensa
         private static void PrintReward(ItemDef chosen, PlayerRunState player)
         {
             Console.WriteLine($"\n¡Mejora obtenida: {chosen.Name}!");
