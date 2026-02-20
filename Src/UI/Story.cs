@@ -5,7 +5,7 @@ namespace RoguelikeYago;
 
 internal static class Story
 {
-    // FASE 0
+    //LA YAGO HISTORIA
     public static void Show()
     {
         Typewriter.WriteLine(

@@ -3,15 +3,16 @@ using System.Threading;
 
 namespace RoguelikeYago.Src.UI;
 
-public static class Typewriter
+public static class Typewriter  //Tipo de escritura
 {
-   public static void Write(string text, int delayMs = 15)
+    //Write es el método que se encarga de escribir el texto
+    public static void Write(string text, int delayMs = 15)
         {
             Console.CursorVisible = false;
 
             for (int i = 0; i < text.Length; i++)
             {
-                // Skip  de la intro
+                // Skip  de la intro (intro es la introducción del juego)
                 if (Console.KeyAvailable)
                 {
                     Console.ReadKey(true); 
